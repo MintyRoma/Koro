@@ -20,5 +20,10 @@ namespace Testo.Forms.SetingsPages
         {
 
         }
+
+        private void metroLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

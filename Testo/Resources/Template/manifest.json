@@ -1,0 +1,10 @@
+{
+  "Name": "Test",
+  "Randomize": true,
+  "ShowRight": true,
+  "UseTimer": true,
+  "AllowRemake": true,
+  "LimitTasks": true,
+  "Timer": 180,
+  "Tasks": 2
+}

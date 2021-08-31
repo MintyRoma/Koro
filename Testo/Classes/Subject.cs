@@ -197,7 +197,7 @@ namespace Testo.Classes
                             answers = copy.OrderBy(i => Guid.NewGuid()).ToList();
                         }
                     }
-                    Task tmpstask = new Task(name, text, type, answers, right, randomize);
+                    Task tmpstask = new Task(name, text, type, answers, right);
                     TMPtasks.Add(tmpstask);
                 }
             }

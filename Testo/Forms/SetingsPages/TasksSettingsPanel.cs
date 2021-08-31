@@ -103,6 +103,16 @@ namespace Testo.Forms.SetingsPages
 
         private void NewSub_Click(object sender, EventArgs e)
         {
+            string rntdir = Directory.GetCurrentDirectory() + "\\runtime";
+            if (Directory.Exists(rntdir))
+            {
+                Directory.Delete(rntdir,true);
+                Directory.CreateDirectory(rntdir);
+            }
+            else
+            {
+                Directory.CreateDirectory(rntdir);
+            }
             EditSubjectForm es = new EditSubjectForm();
             EditSubjectForm edit = new EditSubjectForm();
             edit.ShowDialog();

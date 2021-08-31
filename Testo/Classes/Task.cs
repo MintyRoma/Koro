@@ -8,7 +8,7 @@ namespace Testo.Classes
 {
     public class Task
     {
-
+        private string id;
         private string head;
         private string body;
         private string right;
@@ -17,6 +17,7 @@ namespace Testo.Classes
         private TaskType type;
         private bool randomize;
 
+        public string ID => id;
         public string Header => head;
         public string Text => body;
         public List<Answer> Answers
@@ -51,22 +52,65 @@ namespace Testo.Classes
         public TaskType Type => type;
         public bool RandomizeAnswers => randomize;
 
+        /// <summary>
+        /// Функция контроллируемой переинициализации задания из временного задания
+        /// </summary>
+        /// <param name="tpmTask">Временное задание</param>
+        public void ReInit(Task tmpTask)
+        {
+            head = tmpTask.head;
+            body = tmpTask.Text;
+            imgs = tmpTask.Images;
+            ans = tmpTask.Answers;
+            type = tmpTask.Type;
+        }
+
+        /// <summary>
+        /// Конструктор задания. здесь задаются параметры по умолчанию.
+        /// </summary>
+        public Task ()
+        {
+            string lib = "ABCDEFGHIJKLMOPQRSTUVWXYZ0123456789";
+            string genid = "";
+            Random rnd = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                genid += lib[rnd.Next(lib.Length + i)];
+            }
+
+            id = genid;
+
+            head = "Задание" + id;
+            body = "Сюда вписывается текст задания";
+            ans.Add(new Answer("Ответ"));
+            right = "Ответ";
+            type = TaskType.String;
+        }
+
+        /// <summary>
+        /// Конструктор задания с полными параметрами
+        /// </summary>
+        /// <param name="header">Заголовок задания</param>
+        /// <param name="txt">Текст задания</param>
+        /// <param name="taskType">Тип задания</param>
+        /// <param name="anss">Набор ответов</param>
+        /// <param name="rightans">Верный ответ</param>
         public Task(string header, string txt,TaskType taskType, List<Answer> anss, string rightans)
         {
+            string lib = "ABCDEFGHIJKLMOPQRSTUVWXYZ0123456789";
+            string genid = "";
+            Random rnd = new Random();
+            for (int i = 0; i < 4; i++)
+            {
+                genid += lib[rnd.Next(lib.Length + i)];
+            }
+
+            id = genid;
             head = header;
             body = txt;
             ans = anss;
             right = rightans;
             type = taskType;
-        }
-        public Task(string header, string txt, TaskType taskType, List<Answer> anss, string rightans, bool randomAnswers)
-        {
-            head = header;
-            body = txt;
-            ans = anss;
-            right = rightans;
-            type = taskType;
-            randomize = randomAnswers;
         }
 
         /// <summary>

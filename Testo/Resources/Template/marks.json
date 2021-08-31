@@ -1,0 +1,12 @@
+{
+    "marks": [
+        {
+            "percentage": 0,
+            "description":"Oh man"
+        },
+        {
+            "percentage":10,
+            "description": "Nice"
+        }
+    ]
+}

@@ -29,58 +29,26 @@ namespace Testo.Forms.SetingsPages
         /// </summary>
         private void InitializeComponent()
         {
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.panel1.SuspendLayout();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
+            this.TypeOfMarks = new MetroFramework.Controls.MetroComboBox();
             this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.metroLabel1);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 62);
-            this.panel1.TabIndex = 1;
-            // 
-            // metroLabel1
-            // 
-            this.metroLabel1.AutoSize = true;
-            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
-            this.metroLabel1.Location = new System.Drawing.Point(50, 21);
-            this.metroLabel1.Name = "metroLabel1";
-            this.metroLabel1.Size = new System.Drawing.Size(73, 25);
-            this.metroLabel1.TabIndex = 1;
-            this.metroLabel1.Text = "Оценки";
-            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.comboBox1);
+            this.panel2.Controls.Add(this.TypeOfMarks);
             this.panel2.Controls.Add(this.label4);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel2.Location = new System.Drawing.Point(0, 62);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(604, 94);
-            this.panel2.TabIndex = 2;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Segoe UI Semilight", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Процентный",
-            "Количественный"});
-            this.comboBox1.Location = new System.Drawing.Point(55, 52);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(438, 29);
-            this.comboBox1.TabIndex = 3;
+            this.panel2.TabIndex = 6;
             // 
             // label4
             // 
@@ -103,6 +71,36 @@ namespace Testo.Forms.SetingsPages
             this.label3.TabIndex = 2;
             this.label3.Text = "Метод оценивания";
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.metroLabel1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(604, 62);
+            this.panel1.TabIndex = 5;
+            // 
+            // metroLabel1
+            // 
+            this.metroLabel1.AutoSize = true;
+            this.metroLabel1.FontSize = MetroFramework.MetroLabelSize.Tall;
+            this.metroLabel1.Location = new System.Drawing.Point(50, 21);
+            this.metroLabel1.Name = "metroLabel1";
+            this.metroLabel1.Size = new System.Drawing.Size(73, 25);
+            this.metroLabel1.TabIndex = 1;
+            this.metroLabel1.Text = "Оценки";
+            this.metroLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // TypeOfMarks
+            // 
+            this.TypeOfMarks.FormattingEnabled = true;
+            this.TypeOfMarks.ItemHeight = 23;
+            this.TypeOfMarks.Location = new System.Drawing.Point(55, 51);
+            this.TypeOfMarks.Name = "TypeOfMarks";
+            this.TypeOfMarks.Size = new System.Drawing.Size(472, 29);
+            this.TypeOfMarks.TabIndex = 3;
+            this.TypeOfMarks.UseSelectable = true;
+            // 
             // MarksSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -111,21 +109,21 @@ namespace Testo.Forms.SetingsPages
             this.Controls.Add(this.panel1);
             this.Name = "MarksSetup";
             this.Load += new System.EventHandler(this.MarksSetup_Load);
-            this.panel1.ResumeLayout(false);
-            this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Panel panel1;
-        private MetroFramework.Controls.MetroLabel metroLabel1;
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Panel panel1;
+        private MetroFramework.Controls.MetroLabel metroLabel1;
+        private MetroFramework.Controls.MetroComboBox TypeOfMarks;
     }
 }

@@ -145,6 +145,7 @@
             this.Text = "Ограничение доступа";
             this.TopMost = true;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.SecurityForm_FormClosed);
+            this.Load += new System.EventHandler(this.SecurityForm_Load);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

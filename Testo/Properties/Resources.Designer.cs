@@ -221,11 +221,31 @@ namespace Testo.Properties {
         }
         
         /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        ///   Поиск локализованного ресурса типа System.Byte[].
         /// </summary>
-        internal static System.Drawing.Bitmap marks {
+        internal static byte[] manifest {
+            get {
+                object obj = ResourceManager.GetObject("manifest", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] marks {
             get {
                 object obj = ResourceManager.GetObject("marks", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap marksimg {
+            get {
+                object obj = ResourceManager.GetObject("marksimg", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -287,6 +307,16 @@ namespace Testo.Properties {
             get {
                 object obj = ResourceManager.GetObject("StatusSecurityWarning_16x", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Byte[].
+        /// </summary>
+        internal static byte[] task {
+            get {
+                object obj = ResourceManager.GetObject("task", resourceCulture);
+                return ((byte[])(obj));
             }
         }
         

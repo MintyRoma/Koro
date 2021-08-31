@@ -97,5 +97,10 @@ namespace Testo.Forms
         {
             AccessDenied?.Invoke(this,EventArgs.Empty);
         }
+
+        private void SecurityForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
