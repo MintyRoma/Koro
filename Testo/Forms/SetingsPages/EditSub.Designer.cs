@@ -250,11 +250,11 @@
             // LimitTasksChckBox
             // 
             this.LimitTasksChckBox.AutoSize = true;
-            this.LimitTasksChckBox.Location = new System.Drawing.Point(34, 12);
+            this.LimitTasksChckBox.Location = new System.Drawing.Point(34, 15);
             this.LimitTasksChckBox.Name = "LimitTasksChckBox";
-            this.LimitTasksChckBox.Size = new System.Drawing.Size(203, 30);
+            this.LimitTasksChckBox.Size = new System.Drawing.Size(203, 15);
             this.LimitTasksChckBox.TabIndex = 0;
-            this.LimitTasksChckBox.Text = "Ограничить количество заданий\r\n";
+            this.LimitTasksChckBox.Text = "Ограничить количество заданий";
             this.LimitTasksChckBox.UseSelectable = true;
             this.LimitTasksChckBox.CheckedChanged += new System.EventHandler(this.LimitTasksChckBox_CheckedChanged);
             // 

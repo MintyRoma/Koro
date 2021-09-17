@@ -6,6 +6,8 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Testo.Classes;
+using Testo.Forms.Components;
 
 namespace Testo.Forms.SetingsPages
 {
@@ -13,7 +15,13 @@ namespace Testo.Forms.SetingsPages
     {
         public MarksSetup()
         {
+            ImportMarks();
             InitializeComponent();
+        }
+
+        private void ImportMarks()
+        {
+            MarksManifest manifest = new MarksManifest();
         }
 
         private void MarksSetup_Load(object sender, EventArgs e)
@@ -25,5 +33,13 @@ namespace Testo.Forms.SetingsPages
         {
 
         }
+
+        private void AddMarkBtn_Click(object sender, EventArgs e)
+        {
+            NumericAnswerBox box = new NumericAnswerBox(true);
+            box.Dock = DockStyle.Top;
+            ElementsPanel.Controls.Add(box);
+        }
+
     }
 }

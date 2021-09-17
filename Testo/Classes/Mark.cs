@@ -8,16 +8,23 @@ namespace Testo.Classes
 {
     public class Mark
     {
-        private string name;
-        private double perc;
+        private string id;
 
-        public string Name => name;
-        public double Percentage => perc;
+        public string ID => id;
+        public string Name;
+        public double Percentage;
 
         public Mark(string nam, double percentage)
         {
-            name = nam;
-            perc = percentage;
+            Name = nam;
+            Percentage = percentage;
+        }
+
+        public Mark(string id_value, string name_value, double percentage)
+        {
+            id = id_value;
+            Name = name_value;
+            Percentage = percentage;
         }
     }
 }

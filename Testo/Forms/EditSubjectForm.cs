@@ -29,8 +29,8 @@ namespace Testo.Forms
             }
             set
             {
-                ChangeState();
                 mode = value;
+                ChangeState();
             }
         }
 
@@ -48,60 +48,8 @@ namespace Testo.Forms
                 GenerateNewSubject();
             }
             UpdateTasksList();
-            SubData = new EditSub();
-            FillSubjectData();
-            MarkData = new MarksSetup();
-            FillMarkData();
             Mode = Type.Setup;
             
-        }
-
-        private void FillMarkData()
-        {
-            try
-            {
-
-            }
-            catch (Exception ex)
-            {
-
-            }
-        }
-
-        private void FillSubjectData()
-        {
-            try
-            {
-                string manfile = File.ReadAllText(rntdir + @"\manifest.json");
-                dynamic manifest = JsonConvert.DeserializeObject(manfile);
-                SubData.Name = manifest.Name;
-                SubData.Randomize = manifest.Randomize;
-                SubData.ShowRight = manifest.ShowRight;
-                SubData.UseTimer = manifest.UseTimer;
-                SubData.AllowRemake = manifest.AllowRemake;
-                SubData.LimitTasks = manifest.LimitTasks;
-                SubData.Timer = manifest.Timer;
-                SubData.TasksAmount = manifest.Tasks;
-                SubData.MaxTasks = Directory.GetFiles(rntdir + @"\tasks\").Length;
-                SubData.ChangedStates += RewriteManifest;
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"{ex.Message}");
-            }
-        }
-
-        private void RewriteManifest()
-        {
-            Manifest.AllowRemake = SubData.AllowRemake;
-            Manifest.ShowRight = SubData.ShowRight;
-            Manifest.UseTimer = SubData.UseTimer;
-            Manifest.Randomize = SubData.Randomize;
-            Manifest.LimitTasks = SubData.LimitTasks;
-            Manifest.Timer = SubData.Timer;
-            Manifest.Name = SubData.Name;
-            string manfile = JsonConvert.SerializeObject(Manifest);
-            File.WriteAllText(rntdir+"\\manifest.json", manfile);
         }
 
         private void ChangeState()
@@ -109,12 +57,12 @@ namespace Testo.Forms
             switch (Mode)
             {
                 case Type.Setup:
+                    EditSub es = new EditSub();
                     DetailsPanel.Controls.Clear();
-                    DetailsPanel.Controls.Add(SubData);
+                    DetailsPanel.Controls.Add(es);
                     break;
                 case Type.Marks:
                     DetailsPanel.Controls.Clear();
-                    DetailsPanel.Controls.Add(MarkData);
                     break;
                 case Type.Tasks:
                     break;
@@ -178,6 +126,40 @@ namespace Testo.Forms
         private void History_Click(object sender, EventArgs e)
         {
             Mode = Type.Marks;
+        }
+
+        private void panel3_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void SaveButton_Click(object sender, EventArgs e)
+        {
+            IEditSubForm sf = (IEditSubForm)DetailsPanel.Controls[0];
+            if (!sf.Export())
+            {
+                DialogResult ds = MetroFramework.MetroMessageBox.Show(this, "Произошла ошибка записи файла! В целях исправления изменения сохранены не будут. Для продолжения нажмите \"ОК\"", "Ошибка чтения файла", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                if (ds == DialogResult.OK) sf.Import();
+            }
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            IEditSubForm sf = (IEditSubForm)DetailsPanel.Controls[0];
+            if (!sf.Import())
+            {
+                DialogResult ds = MetroFramework.MetroMessageBox.Show(this, "Произошла ошибка чтения файла! В целях исправления файл будет пересоздан, а информация удалена. Для продолжения нажмите \"Да\"", "Ошибка чтения файла", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                switch(ds)
+                {
+                    case DialogResult.Yes:
+                        sf.Reconstruct();
+                        break;
+                    case DialogResult.No:
+                        this.Close();
+                        break;
+                
+                }
+            }
         }
     }
 }

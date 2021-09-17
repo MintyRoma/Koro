@@ -38,9 +38,15 @@
             this.SubjectsBtn = new System.Windows.Forms.Button();
             this.ProfileBtn = new System.Windows.Forms.Button();
             this.DetailsPanel = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.RefreshBtn = new System.Windows.Forms.Button();
+            this.SaveButton = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ConfigPanel.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -192,11 +198,64 @@
             this.DetailsPanel.Size = new System.Drawing.Size(648, 516);
             this.DetailsPanel.TabIndex = 4;
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.panel3);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(230, 524);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(648, 52);
+            this.panel2.TabIndex = 5;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.RefreshBtn);
+            this.panel3.Controls.Add(this.SaveButton);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(270, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(378, 52);
+            this.panel3.TabIndex = 0;
+            this.panel3.Paint += new System.Windows.Forms.PaintEventHandler(this.panel3_Paint);
+            // 
+            // RefreshBtn
+            // 
+            this.RefreshBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.RefreshBtn.FlatAppearance.BorderSize = 0;
+            this.RefreshBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.RefreshBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.RefreshBtn.ForeColor = System.Drawing.Color.Black;
+            this.RefreshBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RefreshBtn.Location = new System.Drawing.Point(13, 11);
+            this.RefreshBtn.Name = "RefreshBtn";
+            this.RefreshBtn.Size = new System.Drawing.Size(173, 30);
+            this.RefreshBtn.TabIndex = 20;
+            this.RefreshBtn.Text = "Отмена";
+            this.RefreshBtn.UseVisualStyleBackColor = false;
+            this.RefreshBtn.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // SaveButton
+            // 
+            this.SaveButton.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.SaveButton.FlatAppearance.BorderSize = 0;
+            this.SaveButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SaveButton.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SaveButton.ForeColor = System.Drawing.Color.White;
+            this.SaveButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SaveButton.Location = new System.Drawing.Point(192, 11);
+            this.SaveButton.Name = "SaveButton";
+            this.SaveButton.Size = new System.Drawing.Size(173, 30);
+            this.SaveButton.TabIndex = 19;
+            this.SaveButton.Text = "Сохранить";
+            this.SaveButton.UseVisualStyleBackColor = false;
+            this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
+            // 
             // EditSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(898, 596);
+            this.Controls.Add(this.panel2);
             this.Controls.Add(this.DetailsPanel);
             this.Controls.Add(this.menuPanel);
             this.Name = "EditSubjectForm";
@@ -206,6 +265,8 @@
             this.menuPanel.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.ConfigPanel.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -222,5 +283,9 @@
         private System.Windows.Forms.ListBox TasksListBox;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button AddTaskBtn;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Button RefreshBtn;
+        private System.Windows.Forms.Button SaveButton;
     }
 }

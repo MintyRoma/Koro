@@ -6,12 +6,16 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using Testo.Classes;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace Testo.Forms.SetingsPages
 {
-    public partial class EditSub : SetingsPanel
+    public partial class EditSub : SetingsPanel, IEditSubForm
     {
         #region Private Data
+        private string RuntimeDir = @".\runtime\";
         private bool allowremake = false;
         private bool showright = false;
         private bool randomstasks = false;
@@ -161,8 +165,7 @@ namespace Testo.Forms.SetingsPages
         public EditSub()
         {
             InitializeComponent();
-            UseTimer = false;
-            LimitTasks = false;
+            Import();
         }
 
         #region Functions
@@ -229,6 +232,63 @@ namespace Testo.Forms.SetingsPages
         private void NameTxtBox_Leave(object sender, EventArgs e)
         {
             Name = NameTxtBox.Text;
+        }
+
+        public bool Import()
+        {
+            try
+            {
+                string manfile = File.ReadAllText(RuntimeDir + @"\manifest.json");
+                dynamic manifest = JsonConvert.DeserializeObject(manfile);
+                Name = manifest.Name;
+                Randomize = manifest.Randomize;
+                ShowRight = manifest.ShowRight;
+                UseTimer = manifest.UseTimer;
+                AllowRemake = manifest.AllowRemake;
+                LimitTasks = manifest.LimitTasks;
+                Timer = manifest.Timer;
+                TasksAmount = manifest.Tasks;
+                int tasks = Directory.GetFiles(RuntimeDir + @"\tasks\").Length;
+                if (tasks < TasksAmount) TasksAmountUpDown.Maximum = tasks;
+                return true;
+            }
+            catch(Exception ex)
+            {
+                return false;
+            }
+        }
+
+        public bool Export()
+        {
+            try
+            {
+                SubjectManifest manifest = new SubjectManifest();
+                manifest.Name = Name;
+                manifest.Randomize = Randomize;
+                manifest.ShowRight = ShowRight;
+                manifest.UseTimer = UseTimer;
+                manifest.AllowRemake = AllowRemake;
+                manifest.LimitTasks = LimitTasks;
+                manifest.Timer = Timer;
+                manifest.Tasks = TasksAmount;
+                string manfile = JsonConvert.SerializeObject(manifest);
+                File.WriteAllText(RuntimeDir + "\\newmanifest.json", manfile);
+                File.Delete(RuntimeDir+"\\manifest.json");
+                File.Move(RuntimeDir+"\\newmanifest.json",RuntimeDir+"\\manifest.json");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                if (File.Exists("newmanifest.json")) File.Delete("newmanifest.json");
+                return false;
+            }
+
+        }
+
+        public void Reconstruct()
+        {
+            File.WriteAllBytes(RuntimeDir + "\\manifest.json", Testo.Properties.Resources.manifest);
+            Import();
         }
         #endregion
     }

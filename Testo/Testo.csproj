@@ -72,8 +72,10 @@
   <ItemGroup>
     <Compile Include="Classes\Answer.cs" />
     <Compile Include="Classes\DefaultMessages.cs" />
+    <Compile Include="Classes\IAnswerEditor.cs" />
+    <Compile Include="Classes\IEditSubForm.cs" />
     <Compile Include="Classes\Mark.cs" />
-    <Compile Include="Classes\Provider.cs" />
+    <Compile Include="Classes\MarksManifest.cs" />
     <Compile Include="Classes\Subject.cs" />
     <Compile Include="Classes\SubjectManifest.cs" />
     <Compile Include="Classes\Task.cs" />
@@ -85,11 +87,11 @@
     <Compile Include="Forms\AboutForm.Designer.cs">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\Components\AnswerEditor.cs">
+    <Compile Include="Forms\Components\NumericAnswerBox.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\Components\AnswerEditor.Designer.cs">
-      <DependentUpon>AnswerEditor.cs</DependentUpon>
+    <Compile Include="Forms\Components\NumericAnswerBox.Designer.cs">
+      <DependentUpon>NumericAnswerBox.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\RuntimeForm.cs">
       <SubType>Form</SubType>
@@ -180,8 +182,8 @@
     <EmbeddedResource Include="Forms\AboutForm.resx">
       <DependentUpon>AboutForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\Components\AnswerEditor.resx">
-      <DependentUpon>AnswerEditor.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\Components\NumericAnswerBox.resx">
+      <DependentUpon>NumericAnswerBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\RuntimeForm.resx">
       <DependentUpon>RuntimeForm.cs</DependentUpon>
