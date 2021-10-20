@@ -272,14 +272,14 @@ namespace Testo.Forms.SetingsPages
                 manifest.Timer = Timer;
                 manifest.Tasks = TasksAmount;
                 string manfile = JsonConvert.SerializeObject(manifest);
-                File.WriteAllText(RuntimeDir + "\\newmanifest.json", manfile);
+                File.WriteAllText(RuntimeDir + "\\manifest.upd", manfile);
                 File.Delete(RuntimeDir+"\\manifest.json");
-                File.Move(RuntimeDir+"\\newmanifest.json",RuntimeDir+"\\manifest.json");
+                File.Move(RuntimeDir+"\\manifest.upd",RuntimeDir+"\\manifest.json");
                 return true;
             }
             catch (Exception ex)
             {
-                if (File.Exists("newmanifest.json")) File.Delete("newmanifest.json");
+                if (File.Exists("manifest.upd")) File.Delete("manifest.upd");
                 return false;
             }
 
@@ -291,5 +291,10 @@ namespace Testo.Forms.SetingsPages
             Import();
         }
         #endregion
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

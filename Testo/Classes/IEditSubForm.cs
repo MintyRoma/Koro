@@ -7,7 +7,10 @@ namespace Testo.Classes
 {
     interface IEditSubForm
     {
-        //Импортирует файл конкретный для формы
+        /// <summary>
+        /// Импорт файла конкретной формы. Вызов при загрузке панели или при нажатии "Отмена"
+        /// </summary>
+        /// <returns></returns>
         bool Import();
 
         /// <summary>
@@ -18,6 +21,9 @@ namespace Testo.Classes
         /// true = успешный экспорт файла</returns>
         bool Export();
 
+        /// <summary>
+        /// Пересоздает с нуля файл с которым оперирует панель.
+        /// </summary>
         void Reconstruct();
     }
 }

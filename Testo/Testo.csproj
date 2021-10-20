@@ -76,9 +76,11 @@
     <Compile Include="Classes\IEditSubForm.cs" />
     <Compile Include="Classes\Mark.cs" />
     <Compile Include="Classes\MarksManifest.cs" />
+    <Compile Include="Classes\MarkSystem.cs" />
     <Compile Include="Classes\Subject.cs" />
     <Compile Include="Classes\SubjectManifest.cs" />
     <Compile Include="Classes\Task.cs" />
+    <Compile Include="Classes\TaskManifest.cs" />
     <Compile Include="Classes\TaskType.cs" />
     <Compile Include="Classes\Teacher.cs" />
     <Compile Include="Forms\AboutForm.cs">

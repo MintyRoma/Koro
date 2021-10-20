@@ -85,7 +85,7 @@
             this.TasksListBox.Name = "TasksListBox";
             this.TasksListBox.Size = new System.Drawing.Size(210, 311);
             this.TasksListBox.TabIndex = 15;
-            this.TasksListBox.SelectedIndexChanged += new System.EventHandler(this.listBox1_SelectedIndexChanged);
+            this.TasksListBox.SelectedValueChanged += new System.EventHandler(this.TasksListBox_SelectedValueChanged);
             // 
             // AddTaskBtn
             // 

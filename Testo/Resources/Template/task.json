@@ -1,8 +1,14 @@
 {
-    "type": "string",
-    "description": "Soooooooo... Answer is 1",
-    "media":"",
-    "answers":[
-        "1"
-    ]
+  "type": "checkbox",
+  "description": "Soooooooo... Answer is 1 and 3",
+  "media": [],
+  "answers": [
+    "1",
+    "2",
+    "3"
+  ],
+  "right": [
+    "1",
+    "3"
+  ]
 }

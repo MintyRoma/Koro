@@ -1,12 +1,13 @@
 {
-    "marks": [
-        {
-            "percentage": 0,
-            "description":"Oh man"
-        },
-        {
-            "percentage":10,
-            "description": "Nice"
-        }
-    ]
+  "system": "percent",
+  "marks": [
+    {
+      "percentage": 0.0,
+      "description": "Oh man"
+    },
+    {
+      "percentage": 0.1,
+      "description": "Nice"
+    }
+  ]
 }

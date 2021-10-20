@@ -19,7 +19,6 @@ namespace Testo.Forms
             Tasks
         }
 
-
         private Type mode = Type.Setup;
         public Type Mode 
         {
@@ -34,11 +33,8 @@ namespace Testo.Forms
             }
         }
 
-        private SubjectManifest Manifest = new SubjectManifest();
-        private Task RntTask;
-        private EditSub SubData;
-        private MarksSetup MarkData;
         private string rntdir = Directory.GetCurrentDirectory() + "\\runtime";
+        private string taskfile = "";
 
         public EditSubjectForm()
         {
@@ -54,17 +50,20 @@ namespace Testo.Forms
 
         private void ChangeState()
         {
+            DetailsPanel.Controls.Clear();
             switch (Mode)
             {
                 case Type.Setup:
                     EditSub es = new EditSub();
-                    DetailsPanel.Controls.Clear();
                     DetailsPanel.Controls.Add(es);
                     break;
                 case Type.Marks:
-                    DetailsPanel.Controls.Clear();
+                    MarksSetup ms = new MarksSetup();
+                    DetailsPanel.Controls.Add(ms);
                     break;
                 case Type.Tasks:
+                    TaskEditPage tp = new TaskEditPage(taskfile);
+                    DetailsPanel.Controls.Add(tp);
                     break;
             }
         }
@@ -105,11 +104,6 @@ namespace Testo.Forms
         }
 
         private void AddTaskBtn_Click_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
@@ -160,6 +154,12 @@ namespace Testo.Forms
                 
                 }
             }
+        }
+
+        private void TasksListBox_SelectedValueChanged(object sender, EventArgs e)
+        {
+            Mode = Type.Tasks;
+            taskfile = TasksListBox.SelectedItem.ToString();
         }
     }
 }

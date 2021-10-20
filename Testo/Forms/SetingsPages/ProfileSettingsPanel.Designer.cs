@@ -30,6 +30,7 @@
         {
             this.panel1 = new System.Windows.Forms.Panel();
             this.Nametxtbox = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.ChangepasPanel = new System.Windows.Forms.Panel();
@@ -40,13 +41,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.newpasTxtBox = new System.Windows.Forms.TextBox();
             this.changepasBtn = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.ChangepasPanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -74,6 +74,18 @@
             this.Nametxtbox.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.Nametxtbox.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.pictureBox1.Image = global::Testo.Properties.Resources.edit_dark;
+            this.pictureBox1.Location = new System.Drawing.Point(366, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(16, 94);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
+            this.pictureBox1.TabIndex = 1;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
+            // 
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.BackColor = System.Drawing.Color.White;
@@ -94,12 +106,12 @@
             // 
             // panel2
             // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom)));
             this.panel2.Controls.Add(this.ChangepasPanel);
             this.panel2.Controls.Add(this.changepasBtn);
-            this.panel2.Location = new System.Drawing.Point(52, 164);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(3, 164);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(469, 394);
+            this.panel2.Size = new System.Drawing.Size(568, 394);
             this.panel2.TabIndex = 2;
             // 
             // ChangepasPanel
@@ -113,7 +125,7 @@
             this.ChangepasPanel.Controls.Add(this.newpasTxtBox);
             this.ChangepasPanel.Location = new System.Drawing.Point(3, 38);
             this.ChangepasPanel.Name = "ChangepasPanel";
-            this.ChangepasPanel.Size = new System.Drawing.Size(463, 353);
+            this.ChangepasPanel.Size = new System.Drawing.Size(562, 353);
             this.ChangepasPanel.TabIndex = 6;
             this.ChangepasPanel.Visible = false;
             // 
@@ -124,9 +136,9 @@
             this.Cancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Cancel.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Cancel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.Cancel.Location = new System.Drawing.Point(310, 319);
+            this.Cancel.Location = new System.Drawing.Point(310, 198);
             this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(150, 29);
+            this.Cancel.Size = new System.Drawing.Size(162, 29);
             this.Cancel.TabIndex = 5;
             this.Cancel.Text = "Отмена";
             this.Cancel.UseVisualStyleBackColor = true;
@@ -140,9 +152,9 @@
             this.SavePasBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SavePasBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SavePasBtn.ForeColor = System.Drawing.Color.White;
-            this.SavePasBtn.Location = new System.Drawing.Point(90, 319);
+            this.SavePasBtn.Location = new System.Drawing.Point(108, 198);
             this.SavePasBtn.Name = "SavePasBtn";
-            this.SavePasBtn.Size = new System.Drawing.Size(214, 29);
+            this.SavePasBtn.Size = new System.Drawing.Size(182, 29);
             this.SavePasBtn.TabIndex = 5;
             this.SavePasBtn.Text = "Сменить пароль";
             this.SavePasBtn.UseVisualStyleBackColor = false;
@@ -153,7 +165,7 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label2.Location = new System.Drawing.Point(148, 146);
+            this.label2.Location = new System.Drawing.Point(193, 117);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(192, 21);
             this.label2.TabIndex = 4;
@@ -163,7 +175,7 @@
             // 
             this.confirmpasTxtBox.BackColor = System.Drawing.Color.White;
             this.confirmpasTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.confirmpasTxtBox.Location = new System.Drawing.Point(78, 170);
+            this.confirmpasTxtBox.Location = new System.Drawing.Point(123, 141);
             this.confirmpasTxtBox.Name = "confirmpasTxtBox";
             this.confirmpasTxtBox.Size = new System.Drawing.Size(317, 29);
             this.confirmpasTxtBox.TabIndex = 3;
@@ -173,7 +185,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.label1.Location = new System.Drawing.Point(148, 77);
+            this.label1.Location = new System.Drawing.Point(193, 48);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(173, 21);
             this.label1.TabIndex = 2;
@@ -183,7 +195,7 @@
             // 
             this.newpasTxtBox.BackColor = System.Drawing.Color.White;
             this.newpasTxtBox.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.newpasTxtBox.Location = new System.Drawing.Point(78, 101);
+            this.newpasTxtBox.Location = new System.Drawing.Point(123, 72);
             this.newpasTxtBox.Name = "newpasTxtBox";
             this.newpasTxtBox.Size = new System.Drawing.Size(317, 29);
             this.newpasTxtBox.TabIndex = 1;
@@ -198,23 +210,11 @@
             this.changepasBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.changepasBtn.Location = new System.Drawing.Point(154, 3);
             this.changepasBtn.Name = "changepasBtn";
-            this.changepasBtn.Size = new System.Drawing.Size(173, 29);
+            this.changepasBtn.Size = new System.Drawing.Size(272, 29);
             this.changepasBtn.TabIndex = 0;
             this.changepasBtn.Text = "Сменить пароль";
             this.changepasBtn.UseVisualStyleBackColor = true;
             this.changepasBtn.Click += new System.EventHandler(this.Button1_Click);
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.pictureBox1.Image = global::Testo.Properties.Resources.edit_dark;
-            this.pictureBox1.Location = new System.Drawing.Point(366, 0);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(16, 94);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
-            this.pictureBox1.TabIndex = 1;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.PictureBox1_Click);
             // 
             // label3
             // 
@@ -244,11 +244,11 @@
             this.Load += new System.EventHandler(this.ProfileSettingsPanel_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.tableLayoutPanel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.ChangepasPanel.ResumeLayout(false);
             this.ChangepasPanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -5,9 +5,9 @@ using System.Text;
 
 namespace Testo.Classes
 {
-    class MarksManifest
+    public enum MarkSystem
     {
-        public List<dynamic> marks = new List<dynamic>();
-        public string system;
-    }
+        amount,
+        percent
+    };
 }
