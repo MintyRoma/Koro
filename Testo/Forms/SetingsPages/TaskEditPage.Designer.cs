@@ -366,9 +366,9 @@
             this.AnswerRightPanel.Controls.Add(this.panel10);
             this.AnswerRightPanel.Controls.Add(this.label14);
             this.AnswerRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AnswerRightPanel.Location = new System.Drawing.Point(0, 109);
+            this.AnswerRightPanel.Location = new System.Drawing.Point(0, 96);
             this.AnswerRightPanel.Name = "AnswerRightPanel";
-            this.AnswerRightPanel.Size = new System.Drawing.Size(604, 30);
+            this.AnswerRightPanel.Size = new System.Drawing.Size(604, 43);
             this.AnswerRightPanel.TabIndex = 33;
             // 
             // panel10
@@ -389,6 +389,7 @@
             this.AnswerUpDown.Name = "AnswerUpDown";
             this.AnswerUpDown.Size = new System.Drawing.Size(88, 29);
             this.AnswerUpDown.TabIndex = 11;
+            this.AnswerUpDown.Leave += new System.EventHandler(this.AnswerUpDown_Leave);
             // 
             // AnswerCheckBox
             // 

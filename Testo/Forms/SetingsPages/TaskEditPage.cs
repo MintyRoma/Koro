@@ -85,6 +85,7 @@ namespace Testo.Forms.SetingsPages
                 case TaskType.Order:
                     if (right.Count>1)
                     {
+                        
                         DialogResult res = MetroFramework.MetroMessageBox.Show(Parent.Parent, "При наличии нескольких вариантов ответа и смены типа ответа на \"Порядок\", все отметки правильных ответов будут заменены на порядок по списку возможных ответов.\nВы уверены, что хотите поменять тип ответа?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (res == DialogResult.Yes)
                         {
@@ -160,6 +161,7 @@ namespace Testo.Forms.SetingsPages
                 ImgsListView.Items.Add(item);
                 i++;
             }
+            AnswerUpDown.Maximum = AnswersListBox.Items.Count;
         }
 
         private void TaskEditPage_Load(object sender, EventArgs e)
@@ -256,6 +258,7 @@ namespace Testo.Forms.SetingsPages
         {
             try
             {
+                if (!ErrorCorrection()) throw new Exception("Wrong config");
                 TaskManifest manif = new TaskManifest();
                 manif.type = "";
                 switch (type)
@@ -286,9 +289,39 @@ namespace Testo.Forms.SetingsPages
             }
             catch (Exception ex)
             {
+                if (ex.Message == "Wrong config")
+                {
+                    MetroFramework.MetroMessageBox.Show(Parent.Parent, "Выставлены неверные настройки ответов, исправьте и после сохраните еще раз", "Неверный файл", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                    return true;
+                }
                 if (File.Exists(jsonfile + ".upd")) File.Delete(jsonfile + ".upd");
                 return false;
             };
+        }
+
+        private bool ErrorCorrection()
+        {
+            if (right.Count > answers.Count) return false;
+            foreach (string ans in right)
+            {
+                if (!answers.Contains(ans)) return false;
+            }
+            switch (type)
+            {
+                case TaskType.Radio:
+                    if (right.Count > 1) return false;
+                    break;
+                case TaskType.String:
+                    if (right.Count > 1) return false;
+                    break;
+                case TaskType.Checkbox:
+                    if (right.Count < 1) return false;
+                    break;
+                case TaskType.Order:
+                    if (right.Count != answers.Count) return false;
+                    break;
+            }
+            return true;
         }
 
         public void Reconstruct()
@@ -455,6 +488,14 @@ namespace Testo.Forms.SetingsPages
                 this.Dispose();
             }
             else return;
+        }
+
+        private void AnswerUpDown_Leave(object sender, EventArgs e)
+        {
+            string ans = AnswerNameTxtbox.Text;
+            int position = (int)AnswerUpDown.Value;
+            answers.Remove(ans);
+            answers.Insert(position - 1, ans);
         }
     }
 }

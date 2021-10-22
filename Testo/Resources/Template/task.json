@@ -1,14 +1,14 @@
 {
   "type": "checkbox",
-  "description": "Soooooooo... Answer is 1 and 3",
+  "description": "Здесь записывается условие задачи",
   "media": [],
   "answers": [
-    "1",
-    "2",
-    "3"
+    "Ответ 1",
+    "Ответ 2",
+    "Ответ 3"
   ],
   "right": [
-    "1",
-    "3"
+    "Ответ 1",
+    "Ответ 3"
   ]
 }
