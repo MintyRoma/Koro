@@ -86,7 +86,7 @@
             this.passwordTxtBox.MaxLength = 32767;
             this.passwordTxtBox.Name = "passwordTxtBox";
             this.passwordTxtBox.PasswordChar = '•';
-            this.passwordTxtBox.PromptText = "Введите пароль здесь";
+            this.passwordTxtBox.WaterMark = "Введите пароль здесь";
             this.passwordTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
             this.passwordTxtBox.SelectedText = "";
             this.passwordTxtBox.SelectionLength = 0;

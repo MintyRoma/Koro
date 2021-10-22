@@ -63,9 +63,15 @@ namespace Testo.Forms
                     break;
                 case Type.Tasks:
                     TaskEditPage tp = new TaskEditPage(taskfile);
+                    tp.Disposed+=TaskDeleted;
                     DetailsPanel.Controls.Add(tp);
                     break;
             }
+        }
+
+        private void TaskDeleted(object sender, EventArgs e)
+        {
+            UpdateTasksList();
         }
 
         private void UpdateTasksList()
@@ -74,7 +80,7 @@ namespace Testo.Forms
             string[] files = Directory.GetFiles(rntdir+"\\tasks");
             foreach(string f in files)
             {
-                TasksListBox.Items.Add(f);
+                TasksListBox.Items.Add(Path.GetFileName(f).Replace(".json",""));
             }
         }
 
@@ -114,7 +120,7 @@ namespace Testo.Forms
             int num = rnd.Next(0, 956633);
             string filename = $"Задание #{num}";
             TasksListBox.Items.Add(filename);
-            File.WriteAllBytes(rntdir + $"\\tasks\\{filename}.json", Testo.Properties.Resources.manifest);
+            File.WriteAllBytes(rntdir + $"\\tasks\\{filename}.json", Testo.Properties.Resources.task);
         }
 
         private void History_Click(object sender, EventArgs e)
@@ -135,6 +141,7 @@ namespace Testo.Forms
                 DialogResult ds = MetroFramework.MetroMessageBox.Show(this, "Произошла ошибка записи файла! В целях исправления изменения сохранены не будут. Для продолжения нажмите \"ОК\"", "Ошибка чтения файла", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 if (ds == DialogResult.OK) sf.Import();
             }
+            UpdateTasksList();
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -156,10 +163,10 @@ namespace Testo.Forms
             }
         }
 
-        private void TasksListBox_SelectedValueChanged(object sender, EventArgs e)
+        private void TasksListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            Mode = Type.Tasks;
             taskfile = TasksListBox.SelectedItem.ToString();
+            Mode = Type.Tasks;
         }
     }
 }

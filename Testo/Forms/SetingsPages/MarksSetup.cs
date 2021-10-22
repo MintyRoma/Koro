@@ -234,5 +234,15 @@ namespace Testo.Forms.SetingsPages
                 }
             }
         }
+
+        private void ElementsPanel_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void NameTxtBox_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

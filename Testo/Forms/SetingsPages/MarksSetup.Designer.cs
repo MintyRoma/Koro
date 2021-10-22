@@ -29,8 +29,8 @@ namespace Testo.Forms.SetingsPages
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TypeOfMarks = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
@@ -50,8 +50,6 @@ namespace Testo.Forms.SetingsPages
             this.AddMarkBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.metroContextMenu1 = new MetroFramework.Controls.MetroContextMenu(this.components);
-            this.TypeOfMarks = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ElementsPanel.SuspendLayout();
@@ -70,6 +68,19 @@ namespace Testo.Forms.SetingsPages
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(604, 105);
             this.panel2.TabIndex = 6;
+            // 
+            // TypeOfMarks
+            // 
+            this.TypeOfMarks.Enabled = false;
+            this.TypeOfMarks.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.TypeOfMarks.FormattingEnabled = true;
+            this.TypeOfMarks.Items.AddRange(new object[] {
+            "Процентное",
+            "Количественное"});
+            this.TypeOfMarks.Location = new System.Drawing.Point(55, 54);
+            this.TypeOfMarks.Name = "TypeOfMarks";
+            this.TypeOfMarks.Size = new System.Drawing.Size(507, 29);
+            this.TypeOfMarks.TabIndex = 3;
             // 
             // label4
             // 
@@ -121,8 +132,9 @@ namespace Testo.Forms.SetingsPages
             this.ElementsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ElementsPanel.Location = new System.Drawing.Point(0, 145);
             this.ElementsPanel.Name = "ElementsPanel";
-            this.ElementsPanel.Size = new System.Drawing.Size(604, 696);
+            this.ElementsPanel.Size = new System.Drawing.Size(604, 536);
             this.ElementsPanel.TabIndex = 8;
+            this.ElementsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ElementsPanel_Paint);
             // 
             // MarkInfoPanel
             // 
@@ -133,10 +145,10 @@ namespace Testo.Forms.SetingsPages
             this.MarkInfoPanel.Controls.Add(this.label6);
             this.MarkInfoPanel.Controls.Add(this.label7);
             this.MarkInfoPanel.Controls.Add(this.label5);
-            this.MarkInfoPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.MarkInfoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MarkInfoPanel.Location = new System.Drawing.Point(0, 349);
             this.MarkInfoPanel.Name = "MarkInfoPanel";
-            this.MarkInfoPanel.Size = new System.Drawing.Size(604, 347);
+            this.MarkInfoPanel.Size = new System.Drawing.Size(604, 168);
             this.MarkInfoPanel.TabIndex = 1;
             // 
             // label9
@@ -199,6 +211,7 @@ namespace Testo.Forms.SetingsPages
             this.NameTxtBox.UseSelectable = true;
             this.NameTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NameTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.NameTxtBox.Click += new System.EventHandler(this.NameTxtBox_Click);
             this.NameTxtBox.Enter += new System.EventHandler(this.NameTxtBox_Enter);
             this.NameTxtBox.Leave += new System.EventHandler(this.NameTxtBox_Leave);
             // 
@@ -311,24 +324,6 @@ namespace Testo.Forms.SetingsPages
             this.label2.TabIndex = 6;
             this.label2.Text = "Список оценок";
             // 
-            // metroContextMenu1
-            // 
-            this.metroContextMenu1.Name = "metroContextMenu1";
-            this.metroContextMenu1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // TypeOfMarks
-            // 
-            this.TypeOfMarks.Enabled = false;
-            this.TypeOfMarks.Font = new System.Drawing.Font("Segoe UI", 12F);
-            this.TypeOfMarks.FormattingEnabled = true;
-            this.TypeOfMarks.Items.AddRange(new object[] {
-            "Процентное",
-            "Количественное"});
-            this.TypeOfMarks.Location = new System.Drawing.Point(55, 54);
-            this.TypeOfMarks.Name = "TypeOfMarks";
-            this.TypeOfMarks.Size = new System.Drawing.Size(507, 29);
-            this.TypeOfMarks.TabIndex = 3;
-            // 
             // MarksSetup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -337,6 +332,7 @@ namespace Testo.Forms.SetingsPages
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MarksSetup";
+            this.Size = new System.Drawing.Size(604, 681);
             this.Load += new System.EventHandler(this.MarksSetup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
@@ -375,6 +371,5 @@ namespace Testo.Forms.SetingsPages
         private System.Windows.Forms.ListBox MarksListBox;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.ComboBox TypeOfMarks;
-        private MetroFramework.Controls.MetroContextMenu metroContextMenu1;
     }
 }

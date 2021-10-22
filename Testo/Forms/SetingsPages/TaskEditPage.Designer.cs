@@ -29,62 +29,87 @@
         private void InitializeComponent()
         {
             this.panel4 = new System.Windows.Forms.Panel();
-            this.metroComboBox1 = new MetroFramework.Controls.MetroComboBox();
+            this.TypeSelector = new MetroFramework.Controls.MetroComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.TaskDescriptionTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.metroTextBox1 = new MetroFramework.Controls.MetroTextBox();
+            this.NameTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.metroLabel2 = new MetroFramework.Controls.MetroLabel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.DeleteTask = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.TaskDescriptionTxtBox = new MetroFramework.Controls.MetroTextBox();
+            this.DeleteTaskPanel = new System.Windows.Forms.Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label16 = new System.Windows.Forms.Label();
+            this.DeleteTask = new System.Windows.Forms.Button();
+            this.EditAnswerNamePanel = new System.Windows.Forms.Panel();
+            this.AnswerRightPanel = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.AnswerUpDown = new System.Windows.Forms.NumericUpDown();
+            this.AnswerCheckBox = new MetroFramework.Controls.MetroCheckBox();
+            this.AnswerRadioBtn = new MetroFramework.Controls.MetroRadioButton();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.AnswerNameTxtbox = new MetroFramework.Controls.MetroTextBox();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.panel8 = new System.Windows.Forms.Panel();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.AnswersListBox = new System.Windows.Forms.ListBox();
+            this.DeleteAnswerBtn = new System.Windows.Forms.Button();
+            this.AddAnswerBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.listView1 = new System.Windows.Forms.ListView();
             this.DeleteMarkBtn = new System.Windows.Forms.Button();
             this.AddMarkBtn = new System.Windows.Forms.Button();
+            this.ImgsListView = new System.Windows.Forms.ListView();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panel3.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            this.DeleteTaskPanel.SuspendLayout();
+            this.EditAnswerNamePanel.SuspendLayout();
+            this.AnswerRightPanel.SuspendLayout();
+            this.panel10.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AnswerUpDown)).BeginInit();
+            this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel4
             // 
-            this.panel4.Controls.Add(this.metroComboBox1);
+            this.panel4.Controls.Add(this.TypeSelector);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel4.Location = new System.Drawing.Point(0, 224);
+            this.panel4.Location = new System.Drawing.Point(0, 233);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(604, 102);
             this.panel4.TabIndex = 8;
             // 
-            // metroComboBox1
+            // TypeSelector
             // 
-            this.metroComboBox1.FormattingEnabled = true;
-            this.metroComboBox1.ItemHeight = 23;
-            this.metroComboBox1.Items.AddRange(new object[] {
+            this.TypeSelector.FormattingEnabled = true;
+            this.TypeSelector.ItemHeight = 23;
+            this.TypeSelector.Items.AddRange(new object[] {
             "Строка",
             "Выбор одного",
             "Выбор нескольких",
             "Порядок"});
-            this.metroComboBox1.Location = new System.Drawing.Point(55, 53);
-            this.metroComboBox1.Name = "metroComboBox1";
-            this.metroComboBox1.Size = new System.Drawing.Size(492, 29);
-            this.metroComboBox1.TabIndex = 3;
-            this.metroComboBox1.UseSelectable = true;
+            this.TypeSelector.Location = new System.Drawing.Point(55, 53);
+            this.TypeSelector.Name = "TypeSelector";
+            this.TypeSelector.Size = new System.Drawing.Size(492, 29);
+            this.TypeSelector.TabIndex = 3;
+            this.TypeSelector.UseSelectable = true;
+            this.TypeSelector.SelectedIndexChanged += new System.EventHandler(this.TypeSelector_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -118,6 +143,41 @@
             this.panel3.Size = new System.Drawing.Size(604, 204);
             this.panel3.TabIndex = 7;
             // 
+            // TaskDescriptionTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.TaskDescriptionTxtBox.CustomButton.Image = null;
+            this.TaskDescriptionTxtBox.CustomButton.Location = new System.Drawing.Point(342, 2);
+            this.TaskDescriptionTxtBox.CustomButton.Name = "";
+            this.TaskDescriptionTxtBox.CustomButton.Size = new System.Drawing.Size(147, 147);
+            this.TaskDescriptionTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.TaskDescriptionTxtBox.CustomButton.TabIndex = 1;
+            this.TaskDescriptionTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.TaskDescriptionTxtBox.CustomButton.UseSelectable = true;
+            this.TaskDescriptionTxtBox.CustomButton.Visible = false;
+            this.TaskDescriptionTxtBox.Lines = new string[] {
+        "metroTextBox2"};
+            this.TaskDescriptionTxtBox.Location = new System.Drawing.Point(55, 41);
+            this.TaskDescriptionTxtBox.MaxLength = 32767;
+            this.TaskDescriptionTxtBox.Multiline = true;
+            this.TaskDescriptionTxtBox.Name = "TaskDescriptionTxtBox";
+            this.TaskDescriptionTxtBox.PasswordChar = '\0';
+            this.TaskDescriptionTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.TaskDescriptionTxtBox.SelectedText = "";
+            this.TaskDescriptionTxtBox.SelectionLength = 0;
+            this.TaskDescriptionTxtBox.SelectionStart = 0;
+            this.TaskDescriptionTxtBox.ShortcutsEnabled = true;
+            this.TaskDescriptionTxtBox.Size = new System.Drawing.Size(492, 152);
+            this.TaskDescriptionTxtBox.TabIndex = 3;
+            this.TaskDescriptionTxtBox.Text = "metroTextBox2";
+            this.TaskDescriptionTxtBox.UseSelectable = true;
+            this.TaskDescriptionTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.TaskDescriptionTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.TaskDescriptionTxtBox.Click += new System.EventHandler(this.TaskDescriptionTxtBox_Click);
+            this.TaskDescriptionTxtBox.Leave += new System.EventHandler(this.TaskDescriptionTxtBox_Leave);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -141,7 +201,7 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.metroTextBox1);
+            this.panel5.Controls.Add(this.NameTxtBox);
             this.panel5.Controls.Add(this.label7);
             this.panel5.Controls.Add(this.label8);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
@@ -151,37 +211,38 @@
             this.panel5.TabIndex = 6;
             this.panel5.Paint += new System.Windows.Forms.PaintEventHandler(this.panel5_Paint);
             // 
-            // metroTextBox1
+            // NameTxtBox
             // 
             // 
             // 
             // 
-            this.metroTextBox1.CustomButton.Image = null;
-            this.metroTextBox1.CustomButton.Location = new System.Drawing.Point(470, 1);
-            this.metroTextBox1.CustomButton.Name = "";
-            this.metroTextBox1.CustomButton.Size = new System.Drawing.Size(21, 21);
-            this.metroTextBox1.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.metroTextBox1.CustomButton.TabIndex = 1;
-            this.metroTextBox1.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.metroTextBox1.CustomButton.UseSelectable = true;
-            this.metroTextBox1.CustomButton.Visible = false;
-            this.metroTextBox1.Lines = new string[] {
+            this.NameTxtBox.CustomButton.Image = null;
+            this.NameTxtBox.CustomButton.Location = new System.Drawing.Point(470, 1);
+            this.NameTxtBox.CustomButton.Name = "";
+            this.NameTxtBox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.NameTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.NameTxtBox.CustomButton.TabIndex = 1;
+            this.NameTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.NameTxtBox.CustomButton.UseSelectable = true;
+            this.NameTxtBox.CustomButton.Visible = false;
+            this.NameTxtBox.Lines = new string[] {
         "Вопрос #"};
-            this.metroTextBox1.Location = new System.Drawing.Point(55, 49);
-            this.metroTextBox1.MaxLength = 32767;
-            this.metroTextBox1.Name = "metroTextBox1";
-            this.metroTextBox1.PasswordChar = '\0';
-            this.metroTextBox1.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.metroTextBox1.SelectedText = "";
-            this.metroTextBox1.SelectionLength = 0;
-            this.metroTextBox1.SelectionStart = 0;
-            this.metroTextBox1.ShortcutsEnabled = true;
-            this.metroTextBox1.Size = new System.Drawing.Size(492, 23);
-            this.metroTextBox1.TabIndex = 3;
-            this.metroTextBox1.Text = "Вопрос #";
-            this.metroTextBox1.UseSelectable = true;
-            this.metroTextBox1.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.metroTextBox1.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.NameTxtBox.Location = new System.Drawing.Point(55, 49);
+            this.NameTxtBox.MaxLength = 32767;
+            this.NameTxtBox.Name = "NameTxtBox";
+            this.NameTxtBox.PasswordChar = '\0';
+            this.NameTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.NameTxtBox.SelectedText = "";
+            this.NameTxtBox.SelectionLength = 0;
+            this.NameTxtBox.SelectionStart = 0;
+            this.NameTxtBox.ShortcutsEnabled = true;
+            this.NameTxtBox.Size = new System.Drawing.Size(492, 23);
+            this.NameTxtBox.TabIndex = 3;
+            this.NameTxtBox.Text = "Вопрос #";
+            this.NameTxtBox.UseSelectable = true;
+            this.NameTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.NameTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.NameTxtBox.Leave += new System.EventHandler(this.NameTxtBox_Leave);
             // 
             // label7
             // 
@@ -225,84 +286,345 @@
             this.metroLabel2.Text = "Вопрос";
             this.metroLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
-            // panel1
-            // 
-            this.panel1.Controls.Add(this.DeleteTask);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel1.Location = new System.Drawing.Point(0, 760);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(604, 81);
-            this.panel1.TabIndex = 9;
-            // 
-            // DeleteTask
-            // 
-            this.DeleteTask.BackColor = System.Drawing.Color.Gray;
-            this.DeleteTask.FlatAppearance.BorderSize = 0;
-            this.DeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteTask.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteTask.ForeColor = System.Drawing.Color.White;
-            this.DeleteTask.Location = new System.Drawing.Point(399, 19);
-            this.DeleteTask.Name = "DeleteTask";
-            this.DeleteTask.Size = new System.Drawing.Size(148, 36);
-            this.DeleteTask.TabIndex = 10;
-            this.DeleteTask.Text = "Удалить";
-            this.DeleteTask.UseVisualStyleBackColor = false;
-            // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.DeleteTaskPanel);
+            this.panel2.Controls.Add(this.EditAnswerNamePanel);
+            this.panel2.Controls.Add(this.panel8);
             this.panel2.Controls.Add(this.panel4);
             this.panel2.Controls.Add(this.panel7);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 354);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(604, 406);
+            this.panel2.Size = new System.Drawing.Size(604, 846);
             this.panel2.TabIndex = 10;
             // 
-            // TaskDescriptionTxtBox
+            // DeleteTaskPanel
+            // 
+            this.DeleteTaskPanel.Controls.Add(this.label15);
+            this.DeleteTaskPanel.Controls.Add(this.label16);
+            this.DeleteTaskPanel.Controls.Add(this.DeleteTask);
+            this.DeleteTaskPanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.DeleteTaskPanel.Location = new System.Drawing.Point(0, 708);
+            this.DeleteTaskPanel.Name = "DeleteTaskPanel";
+            this.DeleteTaskPanel.Size = new System.Drawing.Size(604, 92);
+            this.DeleteTaskPanel.TabIndex = 13;
+            // 
+            // label15
+            // 
+            this.label15.AutoSize = true;
+            this.label15.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label15.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(50)))), ((int)(((byte)(60)))));
+            this.label15.Location = new System.Drawing.Point(52, 44);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(242, 26);
+            this.label15.TabIndex = 31;
+            this.label15.Text = "Удаляет задание из базы заданий предмета!\r\nДействие отменить нельзя!";
+            // 
+            // label16
+            // 
+            this.label16.AutoSize = true;
+            this.label16.Font = new System.Drawing.Font("Segoe UI Semibold", 12F);
+            this.label16.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.label16.Location = new System.Drawing.Point(51, 23);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(144, 21);
+            this.label16.TabIndex = 32;
+            this.label16.Text = "Удаление задания";
+            // 
+            // DeleteTask
+            // 
+            this.DeleteTask.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(209)))), ((int)(((byte)(17)))), ((int)(((byte)(65)))));
+            this.DeleteTask.FlatAppearance.BorderSize = 0;
+            this.DeleteTask.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteTask.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteTask.ForeColor = System.Drawing.Color.White;
+            this.DeleteTask.Location = new System.Drawing.Point(355, 32);
+            this.DeleteTask.Name = "DeleteTask";
+            this.DeleteTask.Size = new System.Drawing.Size(192, 32);
+            this.DeleteTask.TabIndex = 10;
+            this.DeleteTask.Text = "Удалить задание";
+            this.DeleteTask.UseVisualStyleBackColor = false;
+            this.DeleteTask.Click += new System.EventHandler(this.DeleteTask_Click);
+            // 
+            // EditAnswerNamePanel
+            // 
+            this.EditAnswerNamePanel.Controls.Add(this.AnswerRightPanel);
+            this.EditAnswerNamePanel.Controls.Add(this.label13);
+            this.EditAnswerNamePanel.Controls.Add(this.AnswerNameTxtbox);
+            this.EditAnswerNamePanel.Controls.Add(this.label11);
+            this.EditAnswerNamePanel.Controls.Add(this.label12);
+            this.EditAnswerNamePanel.Dock = System.Windows.Forms.DockStyle.Top;
+            this.EditAnswerNamePanel.Location = new System.Drawing.Point(0, 569);
+            this.EditAnswerNamePanel.Name = "EditAnswerNamePanel";
+            this.EditAnswerNamePanel.Size = new System.Drawing.Size(604, 139);
+            this.EditAnswerNamePanel.TabIndex = 11;
+            this.EditAnswerNamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EditAnswerNamePanel_Paint);
+            // 
+            // AnswerRightPanel
+            // 
+            this.AnswerRightPanel.Controls.Add(this.panel10);
+            this.AnswerRightPanel.Controls.Add(this.label14);
+            this.AnswerRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.AnswerRightPanel.Location = new System.Drawing.Point(0, 109);
+            this.AnswerRightPanel.Name = "AnswerRightPanel";
+            this.AnswerRightPanel.Size = new System.Drawing.Size(604, 30);
+            this.AnswerRightPanel.TabIndex = 33;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.AnswerUpDown);
+            this.panel10.Controls.Add(this.AnswerCheckBox);
+            this.panel10.Controls.Add(this.AnswerRadioBtn);
+            this.panel10.Location = new System.Drawing.Point(459, 1);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(88, 96);
+            this.panel10.TabIndex = 34;
+            // 
+            // AnswerUpDown
+            // 
+            this.AnswerUpDown.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AnswerUpDown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AnswerUpDown.Location = new System.Drawing.Point(0, 50);
+            this.AnswerUpDown.Name = "AnswerUpDown";
+            this.AnswerUpDown.Size = new System.Drawing.Size(88, 29);
+            this.AnswerUpDown.TabIndex = 11;
+            // 
+            // AnswerCheckBox
+            // 
+            this.AnswerCheckBox.AutoSize = true;
+            this.AnswerCheckBox.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AnswerCheckBox.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.AnswerCheckBox.Location = new System.Drawing.Point(0, 25);
+            this.AnswerCheckBox.Name = "AnswerCheckBox";
+            this.AnswerCheckBox.Size = new System.Drawing.Size(88, 25);
+            this.AnswerCheckBox.TabIndex = 1;
+            this.AnswerCheckBox.Text = " ";
+            this.AnswerCheckBox.UseSelectable = true;
+            this.AnswerCheckBox.CheckedChanged += new System.EventHandler(this.AnswerCheckBox_CheckedChanged);
+            // 
+            // AnswerRadioBtn
+            // 
+            this.AnswerRadioBtn.AutoSize = true;
+            this.AnswerRadioBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.AnswerRadioBtn.FontSize = MetroFramework.MetroCheckBoxSize.Tall;
+            this.AnswerRadioBtn.Location = new System.Drawing.Point(0, 0);
+            this.AnswerRadioBtn.Name = "AnswerRadioBtn";
+            this.AnswerRadioBtn.Size = new System.Drawing.Size(88, 25);
+            this.AnswerRadioBtn.TabIndex = 0;
+            this.AnswerRadioBtn.Text = " ";
+            this.AnswerRadioBtn.UseSelectable = true;
+            this.AnswerRadioBtn.CheckedChanged += new System.EventHandler(this.AnswerRadioBtn_CheckedChanged);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label14.Location = new System.Drawing.Point(51, 3);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(130, 21);
+            this.label14.TabIndex = 33;
+            this.label14.Text = "Значение ответа";
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label13.Location = new System.Drawing.Point(51, 43);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(152, 21);
+            this.label13.TabIndex = 32;
+            this.label13.Text = "Содержание ответа";
+            // 
+            // AnswerNameTxtbox
             // 
             // 
             // 
             // 
-            this.TaskDescriptionTxtBox.CustomButton.Image = null;
-            this.TaskDescriptionTxtBox.CustomButton.Location = new System.Drawing.Point(342, 2);
-            this.TaskDescriptionTxtBox.CustomButton.Name = "";
-            this.TaskDescriptionTxtBox.CustomButton.Size = new System.Drawing.Size(147, 147);
-            this.TaskDescriptionTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.TaskDescriptionTxtBox.CustomButton.TabIndex = 1;
-            this.TaskDescriptionTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.TaskDescriptionTxtBox.CustomButton.UseSelectable = true;
-            this.TaskDescriptionTxtBox.CustomButton.Visible = false;
-            this.TaskDescriptionTxtBox.Lines = new string[] {
-        "metroTextBox2"};
-            this.TaskDescriptionTxtBox.Location = new System.Drawing.Point(55, 41);
-            this.TaskDescriptionTxtBox.MaxLength = 32767;
-            this.TaskDescriptionTxtBox.Multiline = true;
-            this.TaskDescriptionTxtBox.Name = "TaskDescriptionTxtBox";
-            this.TaskDescriptionTxtBox.PasswordChar = '\0';
-            this.TaskDescriptionTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.TaskDescriptionTxtBox.SelectedText = "";
-            this.TaskDescriptionTxtBox.SelectionLength = 0;
-            this.TaskDescriptionTxtBox.SelectionStart = 0;
-            this.TaskDescriptionTxtBox.ShortcutsEnabled = true;
-            this.TaskDescriptionTxtBox.Size = new System.Drawing.Size(492, 152);
-            this.TaskDescriptionTxtBox.TabIndex = 3;
-            this.TaskDescriptionTxtBox.Text = "metroTextBox2";
-            this.TaskDescriptionTxtBox.UseSelectable = true;
-            this.TaskDescriptionTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.TaskDescriptionTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.AnswerNameTxtbox.CustomButton.Image = null;
+            this.AnswerNameTxtbox.CustomButton.Location = new System.Drawing.Point(470, 1);
+            this.AnswerNameTxtbox.CustomButton.Name = "";
+            this.AnswerNameTxtbox.CustomButton.Size = new System.Drawing.Size(21, 21);
+            this.AnswerNameTxtbox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.AnswerNameTxtbox.CustomButton.TabIndex = 1;
+            this.AnswerNameTxtbox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.AnswerNameTxtbox.CustomButton.UseSelectable = true;
+            this.AnswerNameTxtbox.CustomButton.Visible = false;
+            this.AnswerNameTxtbox.FontSize = MetroFramework.MetroTextBoxSize.Medium;
+            this.AnswerNameTxtbox.Lines = new string[] {
+        "Ответ"};
+            this.AnswerNameTxtbox.Location = new System.Drawing.Point(55, 67);
+            this.AnswerNameTxtbox.MaxLength = 32767;
+            this.AnswerNameTxtbox.Name = "AnswerNameTxtbox";
+            this.AnswerNameTxtbox.PasswordChar = '\0';
+            this.AnswerNameTxtbox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.AnswerNameTxtbox.SelectedText = "";
+            this.AnswerNameTxtbox.SelectionLength = 0;
+            this.AnswerNameTxtbox.SelectionStart = 0;
+            this.AnswerNameTxtbox.ShortcutsEnabled = true;
+            this.AnswerNameTxtbox.Size = new System.Drawing.Size(492, 23);
+            this.AnswerNameTxtbox.TabIndex = 31;
+            this.AnswerNameTxtbox.Text = "Ответ";
+            this.AnswerNameTxtbox.UseSelectable = true;
+            this.AnswerNameTxtbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.AnswerNameTxtbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.AnswerNameTxtbox.Enter += new System.EventHandler(this.AnswerNameTxtbox_Enter);
+            this.AnswerNameTxtbox.Leave += new System.EventHandler(this.AnswerNameTxtbox_Leave);
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label11.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label11.Location = new System.Drawing.Point(52, 24);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(339, 13);
+            this.label11.TabIndex = 29;
+            this.label11.Text = "Установка отображаемого значения и выбор верного ответа";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label12.Location = new System.Drawing.Point(51, 3);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(179, 21);
+            this.label12.TabIndex = 30;
+            this.label12.Text = "Редактирование ответа";
+            // 
+            // panel8
+            // 
+            this.panel8.Controls.Add(this.label9);
+            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.AnswersListBox);
+            this.panel8.Controls.Add(this.DeleteAnswerBtn);
+            this.panel8.Controls.Add(this.AddAnswerBtn);
+            this.panel8.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel8.Location = new System.Drawing.Point(0, 335);
+            this.panel8.Name = "panel8";
+            this.panel8.Size = new System.Drawing.Size(604, 234);
+            this.panel8.TabIndex = 10;
+            this.panel8.Paint += new System.Windows.Forms.PaintEventHandler(this.panel8_Paint);
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label9.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(100)))), ((int)(((byte)(100)))));
+            this.label9.Location = new System.Drawing.Point(52, 24);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(91, 13);
+            this.label9.TabIndex = 27;
+            this.label9.Text = "Список ответов";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label10.Location = new System.Drawing.Point(51, 3);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(63, 21);
+            this.label10.TabIndex = 28;
+            this.label10.Text = "Ответы";
+            // 
+            // AnswersListBox
+            // 
+            this.AnswersListBox.Font = new System.Drawing.Font("Segoe UI", 12F);
+            this.AnswersListBox.FormattingEnabled = true;
+            this.AnswersListBox.ItemHeight = 21;
+            this.AnswersListBox.Location = new System.Drawing.Point(55, 50);
+            this.AnswersListBox.Name = "AnswersListBox";
+            this.AnswersListBox.Size = new System.Drawing.Size(346, 172);
+            this.AnswersListBox.TabIndex = 26;
+            this.AnswersListBox.SelectedIndexChanged += new System.EventHandler(this.AnswersListBox_SelectedIndexChanged);
+            // 
+            // DeleteAnswerBtn
+            // 
+            this.DeleteAnswerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DeleteAnswerBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteAnswerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteAnswerBtn.ForeColor = System.Drawing.Color.Black;
+            this.DeleteAnswerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteAnswerBtn.Location = new System.Drawing.Point(407, 86);
+            this.DeleteAnswerBtn.Name = "DeleteAnswerBtn";
+            this.DeleteAnswerBtn.Size = new System.Drawing.Size(140, 30);
+            this.DeleteAnswerBtn.TabIndex = 25;
+            this.DeleteAnswerBtn.Text = "Удалить";
+            this.DeleteAnswerBtn.UseVisualStyleBackColor = false;
+            this.DeleteAnswerBtn.Click += new System.EventHandler(this.DeleteAnswerBtn_Click);
+            // 
+            // AddAnswerBtn
+            // 
+            this.AddAnswerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.AddAnswerBtn.FlatAppearance.BorderSize = 0;
+            this.AddAnswerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddAnswerBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddAnswerBtn.ForeColor = System.Drawing.Color.White;
+            this.AddAnswerBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddAnswerBtn.Location = new System.Drawing.Point(407, 50);
+            this.AddAnswerBtn.Name = "AddAnswerBtn";
+            this.AddAnswerBtn.Size = new System.Drawing.Size(140, 30);
+            this.AddAnswerBtn.TabIndex = 24;
+            this.AddAnswerBtn.Text = "Добавить";
+            this.AddAnswerBtn.UseVisualStyleBackColor = false;
+            this.AddAnswerBtn.Click += new System.EventHandler(this.AddAnswerBtn_Click);
             // 
             // panel7
             // 
             this.panel7.Controls.Add(this.DeleteMarkBtn);
             this.panel7.Controls.Add(this.AddMarkBtn);
-            this.panel7.Controls.Add(this.listView1);
+            this.panel7.Controls.Add(this.ImgsListView);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label4);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(604, 224);
+            this.panel7.Size = new System.Drawing.Size(604, 233);
             this.panel7.TabIndex = 9;
+            // 
+            // DeleteMarkBtn
+            // 
+            this.DeleteMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DeleteMarkBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteMarkBtn.ForeColor = System.Drawing.Color.Black;
+            this.DeleteMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteMarkBtn.Location = new System.Drawing.Point(261, 197);
+            this.DeleteMarkBtn.Name = "DeleteMarkBtn";
+            this.DeleteMarkBtn.Size = new System.Drawing.Size(140, 30);
+            this.DeleteMarkBtn.TabIndex = 24;
+            this.DeleteMarkBtn.Text = "Удалить";
+            this.DeleteMarkBtn.UseVisualStyleBackColor = false;
+            this.DeleteMarkBtn.Click += new System.EventHandler(this.DeleteMarkBtn_Click);
+            // 
+            // AddMarkBtn
+            // 
+            this.AddMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.AddMarkBtn.FlatAppearance.BorderSize = 0;
+            this.AddMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddMarkBtn.ForeColor = System.Drawing.Color.White;
+            this.AddMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddMarkBtn.Location = new System.Drawing.Point(407, 197);
+            this.AddMarkBtn.Name = "AddMarkBtn";
+            this.AddMarkBtn.Size = new System.Drawing.Size(140, 30);
+            this.AddMarkBtn.TabIndex = 23;
+            this.AddMarkBtn.Text = "Добавить";
+            this.AddMarkBtn.UseVisualStyleBackColor = false;
+            this.AddMarkBtn.Click += new System.EventHandler(this.AddMarkBtn_Click);
+            // 
+            // ImgsListView
+            // 
+            this.ImgsListView.Alignment = System.Windows.Forms.ListViewAlignment.Left;
+            this.ImgsListView.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.ImgsListView.HideSelection = false;
+            this.ImgsListView.Location = new System.Drawing.Point(55, 40);
+            this.ImgsListView.Name = "ImgsListView";
+            this.ImgsListView.Size = new System.Drawing.Size(492, 151);
+            this.ImgsListView.TabIndex = 5;
+            this.ImgsListView.UseCompatibleStateImageBehavior = false;
             // 
             // label3
             // 
@@ -325,57 +647,17 @@
             this.label4.TabIndex = 4;
             this.label4.Text = "Медиа";
             // 
-            // listView1
-            // 
-            this.listView1.HideSelection = false;
-            this.listView1.Location = new System.Drawing.Point(55, 53);
-            this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(492, 118);
-            this.listView1.TabIndex = 5;
-            this.listView1.UseCompatibleStateImageBehavior = false;
-            // 
-            // DeleteMarkBtn
-            // 
-            this.DeleteMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DeleteMarkBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteMarkBtn.ForeColor = System.Drawing.Color.Black;
-            this.DeleteMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteMarkBtn.Location = new System.Drawing.Point(261, 177);
-            this.DeleteMarkBtn.Name = "DeleteMarkBtn";
-            this.DeleteMarkBtn.Size = new System.Drawing.Size(140, 30);
-            this.DeleteMarkBtn.TabIndex = 24;
-            this.DeleteMarkBtn.Text = "Удалить";
-            this.DeleteMarkBtn.UseVisualStyleBackColor = false;
-            this.DeleteMarkBtn.Click += new System.EventHandler(this.DeleteMarkBtn_Click);
-            // 
-            // AddMarkBtn
-            // 
-            this.AddMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.AddMarkBtn.FlatAppearance.BorderSize = 0;
-            this.AddMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddMarkBtn.ForeColor = System.Drawing.Color.White;
-            this.AddMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddMarkBtn.Location = new System.Drawing.Point(407, 177);
-            this.AddMarkBtn.Name = "AddMarkBtn";
-            this.AddMarkBtn.Size = new System.Drawing.Size(140, 30);
-            this.AddMarkBtn.TabIndex = 23;
-            this.AddMarkBtn.Text = "Добавить";
-            this.AddMarkBtn.UseVisualStyleBackColor = false;
-            this.AddMarkBtn.Click += new System.EventHandler(this.AddMarkBtn_Click);
-            // 
             // TaskEditPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoSize = true;
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel6);
             this.Name = "TaskEditPage";
+            this.Size = new System.Drawing.Size(604, 1200);
             this.Load += new System.EventHandler(this.TaskEditPage_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -385,8 +667,18 @@
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            this.DeleteTaskPanel.ResumeLayout(false);
+            this.DeleteTaskPanel.PerformLayout();
+            this.EditAnswerNamePanel.ResumeLayout(false);
+            this.EditAnswerNamePanel.PerformLayout();
+            this.AnswerRightPanel.ResumeLayout(false);
+            this.AnswerRightPanel.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.AnswerUpDown)).EndInit();
+            this.panel8.ResumeLayout(false);
+            this.panel8.PerformLayout();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.ResumeLayout(false);
@@ -401,21 +693,40 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel5;
-        private MetroFramework.Controls.MetroTextBox metroTextBox1;
+        private MetroFramework.Controls.MetroTextBox NameTxtBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Panel panel6;
         private MetroFramework.Controls.MetroLabel metroLabel2;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button DeleteTask;
         private System.Windows.Forms.Panel panel2;
-        private MetroFramework.Controls.MetroComboBox metroComboBox1;
+        private MetroFramework.Controls.MetroComboBox TypeSelector;
         private MetroFramework.Controls.MetroTextBox TaskDescriptionTxtBox;
         private System.Windows.Forms.Panel panel7;
-        private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.ListView ImgsListView;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button DeleteMarkBtn;
         private System.Windows.Forms.Button AddMarkBtn;
+        private System.Windows.Forms.Panel EditAnswerNamePanel;
+        private MetroFramework.Controls.MetroTextBox AnswerNameTxtbox;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Panel panel8;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.ListBox AnswersListBox;
+        private System.Windows.Forms.Button DeleteAnswerBtn;
+        private System.Windows.Forms.Button AddAnswerBtn;
+        private System.Windows.Forms.Label label13;
+        private System.Windows.Forms.Panel DeleteTaskPanel;
+        private System.Windows.Forms.Button DeleteTask;
+        private System.Windows.Forms.Label label15;
+        private System.Windows.Forms.Label label16;
+        private System.Windows.Forms.Panel AnswerRightPanel;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.NumericUpDown AnswerUpDown;
+        private MetroFramework.Controls.MetroCheckBox AnswerCheckBox;
+        private MetroFramework.Controls.MetroRadioButton AnswerRadioBtn;
+        private System.Windows.Forms.Label label14;
     }
 }
