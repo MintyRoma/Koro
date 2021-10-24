@@ -155,6 +155,7 @@ namespace Testo.Forms.SetingsPages
             File.WriteAllText(@".\runtime\signature", $"sig: {BitConverter.ToString(hashconstructor.Hash).ToUpper()}");
 
             //Build archive
+            if (File.Exists("archive.zip")) File.Delete("archive.zip");
             ZipFile arch = new ZipFile("archive.zip");
             arch.AddDirectory(@".\runtime");
             arch.Save();
