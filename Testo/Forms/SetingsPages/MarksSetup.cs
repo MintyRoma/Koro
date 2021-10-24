@@ -35,13 +35,14 @@ namespace Testo.Forms.SetingsPages
             {
                 MarksListBox.Items.Add(mark.Name);
             }
+            TypeOfMarks.SelectedItem = "";
             switch (system)
             {
                 case MarkSystem.percent:
-                    TypeOfMarks.SelectedText = "Процентное";
+                    TypeOfMarks.SelectedItem = "Процентное";
                     break;
                 default:
-                    TypeOfMarks.SelectedText = "Количественное";
+                    TypeOfMarks.SelectedItem = "Количественное";
                     break;
             }
         }
@@ -191,7 +192,9 @@ namespace Testo.Forms.SetingsPages
 
         private void DeleteMarkBtn_Click(object sender, EventArgs e)
         {
-            string mkname = MarksListBox.SelectedItem.ToString();
+            string mkname="";
+            if (MarksListBox.SelectedItem != null) mkname = MarksListBox.SelectedItem.ToString();
+            else return;
             if (mkname == null) return;
             Mark delete = new Mark();
             foreach (Mark mk in marks)

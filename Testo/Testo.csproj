@@ -59,9 +59,6 @@
     <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="SVG, Version=2.0.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\SvgNet.2.0.3\lib\net40\SVG.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
@@ -143,11 +140,11 @@
     <Compile Include="Forms\SetingsForm.Designer.cs">
       <DependentUpon>SetingsForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SetingsPages\EditSub.cs">
+    <Compile Include="Forms\SetingsPages\EditSubjectPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\SetingsPages\EditSub.Designer.cs">
-      <DependentUpon>EditSub.cs</DependentUpon>
+    <Compile Include="Forms\SetingsPages\EditSubjectPage.Designer.cs">
+      <DependentUpon>EditSubjectPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\SetingsPages\ProfileSettingsPanel.cs">
       <SubType>UserControl</SubType>
@@ -167,11 +164,11 @@
     <Compile Include="Forms\SetingsPages\TaskEditPage.Designer.cs">
       <DependentUpon>TaskEditPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Forms\SetingsPages\TasksSettingsPanel.cs">
+    <Compile Include="Forms\SetingsPages\SubjectListingPage.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="Forms\SetingsPages\TasksSettingsPanel.Designer.cs">
-      <DependentUpon>TasksSettingsPanel.cs</DependentUpon>
+    <Compile Include="Forms\SetingsPages\SubjectListingPage.Designer.cs">
+      <DependentUpon>SubjectListingPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\StartForm.cs">
       <SubType>Form</SubType>
@@ -214,8 +211,8 @@
     <EmbeddedResource Include="Forms\SetingsForm.resx">
       <DependentUpon>SetingsForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SetingsPages\EditSub.resx">
-      <DependentUpon>EditSub.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SetingsPages\EditSubjectPage.resx">
+      <DependentUpon>EditSubjectPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\SetingsPages\ProfileSettingsPanel.resx">
       <DependentUpon>ProfileSettingsPanel.cs</DependentUpon>
@@ -226,8 +223,8 @@
     <EmbeddedResource Include="Forms\SetingsPages\TaskEditPage.resx">
       <DependentUpon>TaskEditPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Forms\SetingsPages\TasksSettingsPanel.resx">
-      <DependentUpon>TasksSettingsPanel.cs</DependentUpon>
+    <EmbeddedResource Include="Forms\SetingsPages\SubjectListingPage.resx">
+      <DependentUpon>SubjectListingPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\StartForm.resx">
       <DependentUpon>StartForm.cs</DependentUpon>

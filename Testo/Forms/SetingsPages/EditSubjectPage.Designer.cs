@@ -1,6 +1,6 @@
 ﻿namespace Testo.Forms.SetingsPages
 {
-    partial class EditSub
+    partial class EditSubjectPage
     {
         /// <summary> 
         /// Обязательная переменная конструктора.

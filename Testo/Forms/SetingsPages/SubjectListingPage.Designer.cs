@@ -1,6 +1,6 @@
 ﻿namespace Testo.Forms.SetingsPages
 {
-    partial class TasksSettingsPanel
+    partial class SubjectsListingPanel
     {
         /// <summary> 
         /// Обязательная переменная конструктора.
@@ -368,7 +368,7 @@
             this.label6.TabIndex = 0;
             this.label6.Text = "Импорт";
             // 
-            // TasksSettingsPanel
+            // SubjectsListingPanel
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -376,7 +376,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel11);
             this.Controls.Add(this.panel1);
-            this.Name = "TasksSettingsPanel";
+            this.Name = "SubjectsListingPanel";
             this.Size = new System.Drawing.Size(604, 704);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();

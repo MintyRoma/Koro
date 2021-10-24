@@ -79,7 +79,7 @@ namespace Testo.Forms
             switch (Mode)
             {
                 case mode_selecter.tasks:
-                    panel = new SetingsPages.TasksSettingsPanel();
+                    panel = new SetingsPages.SubjectsListingPanel();
                     PreparePanel();
                     ActivateButton(SubjectsBtn);
                     ViewerPanel.Controls.Add(panel);

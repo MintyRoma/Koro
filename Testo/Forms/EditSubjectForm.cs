@@ -50,11 +50,11 @@ namespace Testo.Forms
 
         private void ChangeState()
         {
-            DetailsPanel.Controls.Clear();
+            foreach (Control ctrl in DetailsPanel.Controls) ctrl.Dispose();
             switch (Mode)
             {
                 case Type.Setup:
-                    EditSub es = new EditSub();
+                    EditSubjectPage es = new EditSubjectPage();
                     DetailsPanel.Controls.Add(es);
                     break;
                 case Type.Marks:

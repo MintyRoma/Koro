@@ -191,7 +191,7 @@ namespace Testo.Forms.SetingsPages
                     string pic = fd.FileName;
                     string storage = @".\runtime\media\" + Path.GetFileName(pic);
                     if (media.Contains(storage)) throw new Exception("Filename exist");
-                    File.Copy(pic, storage);
+                    if (!File.Exists(storage))File.Copy(pic, storage);
                     media.Add(storage);
                     ConstructData();
                 }
@@ -206,6 +206,7 @@ namespace Testo.Forms.SetingsPages
 
         private void DeleteMarkBtn_Click(object sender, EventArgs e)
         {
+            if (ImgsListView.SelectedItems == null) return;
             ListViewItem item = ImgsListView.SelectedItems[0];
             string filename = @".\runtime\media\"+item.Text;
             media.Remove(filename);
@@ -467,13 +468,15 @@ namespace Testo.Forms.SetingsPages
 
         private void AddAnswerBtn_Click(object sender, EventArgs e)
         {
-            answers.Add($"Ответ #{AnswersListBox.Items.Count + 1}");
+            if (type!=TaskType.String)answers.Add($"Ответ #{AnswersListBox.Items.Count + 1}");
             ConstructData();
         }
 
         private void DeleteAnswerBtn_Click(object sender, EventArgs e)
         {
-            string del = AnswersListBox.SelectedItem.ToString();
+            string del="";
+            if (AnswersListBox.SelectedItem != null) del = AnswersListBox.SelectedItem.ToString();
+            else return;
             answers.Remove(del);
             if (right.Contains(del)) right.Remove(del);
             ConstructData();

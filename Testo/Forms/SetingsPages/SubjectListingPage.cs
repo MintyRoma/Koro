@@ -7,16 +7,19 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Security.Cryptography;
+using Ionic.Zip;
+using Newtonsoft.Json;
 
 namespace Testo.Forms.SetingsPages
 {
-    public partial class TasksSettingsPanel : SetingsPanel
+    public partial class SubjectsListingPanel : SetingsPanel
     {
 
         private SetingsPanel sp;
 
         List<string> files = new List<string>();
-        public TasksSettingsPanel()
+        public SubjectsListingPanel()
         {
             InitializeComponent();
             string[] Subs = { };
@@ -113,9 +116,53 @@ namespace Testo.Forms.SetingsPages
             {
                 Directory.CreateDirectory(rntdir);
             }
-            EditSubjectForm es = new EditSubjectForm();
             EditSubjectForm edit = new EditSubjectForm();
+            edit.FormClosed += BuildSubject;
             edit.ShowDialog();
+        }
+
+        private void BuildSubject(object sender, FormClosedEventArgs e)
+        {
+            //Get SubjectName
+            string SubjectName = "";
+            string manfile = File.ReadAllText(@".\runtime\manifest.json");
+            dynamic manifest = JsonConvert.DeserializeObject(manfile);
+            SubjectName = manifest.Name;
+
+            //Table of content
+            if (File.Exists(@".\runtime\content")) File.Delete(@".\runtime\content");
+            List<string> content = new List<string>();
+            string final = "";
+            content = Directory.GetFiles(@".\runtime\", "*.*", SearchOption.AllDirectories).ToList();
+            foreach (string str in content)
+            {
+                final += str + "\n";
+            }
+            File.WriteAllText(@".\runtime\content", final);
+
+
+            //Signature
+            if (File.Exists(@".\runtime\signature")) File.Delete(@".\runtime\signature");
+            MD5 hashconstructor = MD5.Create();
+            byte[] databytes;
+            List<string> files = Directory.GetFiles(@".\runtime\", "*.*", SearchOption.AllDirectories).ToList();
+            foreach (string file in files)
+            {
+                byte[] data = File.ReadAllBytes(file);
+                if (files.IndexOf(file) == files.Count - 1) hashconstructor.TransformFinalBlock(data, 0, data.Length);
+                else hashconstructor.TransformBlock(data, 0, data.Length, data, 0);
+            }
+            File.WriteAllText(@".\runtime\signature", $"sig: {BitConverter.ToString(hashconstructor.Hash).ToUpper()}");
+
+            //Build archive
+            ZipFile arch = new ZipFile("archive.zip");
+            arch.AddDirectory(@".\runtime");
+            arch.Save();
+
+            //Secure archive
+            byte[] reverse = File.ReadAllBytes("archive.zip");
+            byte[] export = reverse.Reverse().ToArray();
+            File.WriteAllBytes($@".\Subjects\{SubjectName}.tsf",export);
         }
 
         private void ClosedEdit()

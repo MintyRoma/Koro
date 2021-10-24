@@ -12,7 +12,7 @@ using System.IO;
 
 namespace Testo.Forms.SetingsPages
 {
-    public partial class EditSub : SetingsPanel, IEditSubForm
+    public partial class EditSubjectPage : SetingsPanel, IEditSubForm
     {
         #region Private Data
         private string RuntimeDir = @".\runtime\";
@@ -162,7 +162,7 @@ namespace Testo.Forms.SetingsPages
         #endregion
 
         //Constructor
-        public EditSub()
+        public EditSubjectPage()
         {
             InitializeComponent();
             Import();
