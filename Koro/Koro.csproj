@@ -5,7 +5,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{4D29F928-29DA-40C3-AD27-42A1C3E07924}</ProjectGuid>
+    <ProjectGuid>{DCBDB92F-3D4C-4ECD-8047-D9B15DF92B5B}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <RootNamespace>Koro</RootNamespace>
     <AssemblyName>Koro</AssemblyName>
