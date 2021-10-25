@@ -305,7 +305,7 @@
             this.DeleteTaskPanel.Controls.Add(this.label16);
             this.DeleteTaskPanel.Controls.Add(this.DeleteTask);
             this.DeleteTaskPanel.Dock = System.Windows.Forms.DockStyle.Top;
-            this.DeleteTaskPanel.Location = new System.Drawing.Point(0, 708);
+            this.DeleteTaskPanel.Location = new System.Drawing.Point(0, 722);
             this.DeleteTaskPanel.Name = "DeleteTaskPanel";
             this.DeleteTaskPanel.Size = new System.Drawing.Size(604, 92);
             this.DeleteTaskPanel.TabIndex = 13;
@@ -357,7 +357,7 @@
             this.EditAnswerNamePanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.EditAnswerNamePanel.Location = new System.Drawing.Point(0, 569);
             this.EditAnswerNamePanel.Name = "EditAnswerNamePanel";
-            this.EditAnswerNamePanel.Size = new System.Drawing.Size(604, 139);
+            this.EditAnswerNamePanel.Size = new System.Drawing.Size(604, 153);
             this.EditAnswerNamePanel.TabIndex = 11;
             this.EditAnswerNamePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.EditAnswerNamePanel_Paint);
             // 
@@ -366,9 +366,9 @@
             this.AnswerRightPanel.Controls.Add(this.panel10);
             this.AnswerRightPanel.Controls.Add(this.label14);
             this.AnswerRightPanel.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.AnswerRightPanel.Location = new System.Drawing.Point(0, 96);
+            this.AnswerRightPanel.Location = new System.Drawing.Point(0, 89);
             this.AnswerRightPanel.Name = "AnswerRightPanel";
-            this.AnswerRightPanel.Size = new System.Drawing.Size(604, 43);
+            this.AnswerRightPanel.Size = new System.Drawing.Size(604, 64);
             this.AnswerRightPanel.TabIndex = 33;
             // 
             // panel10
@@ -469,6 +469,7 @@
             this.AnswerNameTxtbox.UseSelectable = true;
             this.AnswerNameTxtbox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.AnswerNameTxtbox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.AnswerNameTxtbox.Click += new System.EventHandler(this.AnswerNameTxtbox_Click);
             this.AnswerNameTxtbox.Enter += new System.EventHandler(this.AnswerNameTxtbox_Enter);
             this.AnswerNameTxtbox.Leave += new System.EventHandler(this.AnswerNameTxtbox_Leave);
             // 

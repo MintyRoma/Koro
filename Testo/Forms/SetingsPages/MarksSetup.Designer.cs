@@ -132,7 +132,7 @@ namespace Testo.Forms.SetingsPages
             this.ElementsPanel.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ElementsPanel.Location = new System.Drawing.Point(0, 145);
             this.ElementsPanel.Name = "ElementsPanel";
-            this.ElementsPanel.Size = new System.Drawing.Size(604, 536);
+            this.ElementsPanel.Size = new System.Drawing.Size(604, 563);
             this.ElementsPanel.TabIndex = 8;
             this.ElementsPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.ElementsPanel_Paint);
             // 
@@ -148,7 +148,7 @@ namespace Testo.Forms.SetingsPages
             this.MarkInfoPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.MarkInfoPanel.Location = new System.Drawing.Point(0, 349);
             this.MarkInfoPanel.Name = "MarkInfoPanel";
-            this.MarkInfoPanel.Size = new System.Drawing.Size(604, 168);
+            this.MarkInfoPanel.Size = new System.Drawing.Size(604, 177);
             this.MarkInfoPanel.TabIndex = 1;
             // 
             // label9
@@ -332,7 +332,7 @@ namespace Testo.Forms.SetingsPages
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "MarksSetup";
-            this.Size = new System.Drawing.Size(604, 681);
+            this.Size = new System.Drawing.Size(604, 708);
             this.Load += new System.EventHandler(this.MarksSetup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

@@ -28,8 +28,6 @@ namespace Testo.Forms.SetingsPages
         #endregion
 
         #region Events
-        public delegate void changedstate();
-        public event changedstate ChangedStates;
         #endregion
 
         #region Public Data
@@ -40,7 +38,6 @@ namespace Testo.Forms.SetingsPages
             {
                 allowremake = value;
                 AllowReamakeChckBox.Checked = allowremake;
-                ChangedStates?.Invoke();
             }
         }
         public bool ShowRight
@@ -50,7 +47,6 @@ namespace Testo.Forms.SetingsPages
             {
                 showright = value;
                 ShowRightChckBox.Checked = showright;
-                ChangedStates?.Invoke();
             }
         }
         public bool Randomize
@@ -60,7 +56,6 @@ namespace Testo.Forms.SetingsPages
             {
                 randomstasks = value;
                 RandomTasksChckBox.Checked = value;
-                ChangedStates?.Invoke();
             }
         }
         public bool UseTimer
@@ -82,7 +77,6 @@ namespace Testo.Forms.SetingsPages
                     TimeDescription.Enabled = true;
                     TimeUpDown.Enabled = true;
                 }
-                ChangedStates?.Invoke();
             }
         }
         public bool LimitTasks
@@ -104,7 +98,6 @@ namespace Testo.Forms.SetingsPages
                     AmountDescription.Enabled = true;
                     TasksAmountUpDown.Enabled = true;
                 }
-                ChangedStates?.Invoke();
             }
         }
         public int Timer
@@ -117,7 +110,6 @@ namespace Testo.Forms.SetingsPages
             {
                 timer = value;
                 TimeUpDown.Value = timer;
-                ChangedStates?.Invoke();
             }
         }
         public int TasksAmount
@@ -130,7 +122,6 @@ namespace Testo.Forms.SetingsPages
             {
                 tasksamount = value;
                 TasksAmountUpDown.Value = tasksamount;
-                ChangedStates?.Invoke();
             }
         }
         public int MaxTasks
@@ -143,7 +134,6 @@ namespace Testo.Forms.SetingsPages
             {
                 TasksAmountUpDown.Maximum = value;
                 maxtsk = value;
-                ChangedStates?.Invoke();
             }
             
         }
@@ -156,7 +146,6 @@ namespace Testo.Forms.SetingsPages
             set
             {
                 name = value;
-                ChangedStates?.Invoke();
             }
         }
         #endregion
@@ -166,6 +155,21 @@ namespace Testo.Forms.SetingsPages
         {
             InitializeComponent();
             Import();
+            ConstructData();
+        }
+
+        private void ConstructData()
+        {
+            NameTxtBox.Text = Name;
+            AllowReamakeChckBox.Checked = AllowRemake;
+            ShowRightChckBox.Checked = ShowRight;
+            RandomTasksChckBox.Checked = Randomize;
+            UseTimeChckBox.Checked = UseTimer;
+            LimitTasksChckBox.Checked = LimitTasks;
+            TimeUpDown.Value = Timer;
+            TasksAmountUpDown.Value = TasksAmount;
+            int tasksamount = Directory.GetFiles(@".\runtime\tasks\").Length;
+            TasksAmountUpDown.Maximum = tasksamount;
         }
 
         #region Functions

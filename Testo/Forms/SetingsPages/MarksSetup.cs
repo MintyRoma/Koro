@@ -147,6 +147,7 @@ namespace Testo.Forms.SetingsPages
 
         private void MarksListBox_SelectedValueChanged(object sender, EventArgs e)
         {
+            if (MarksListBox.SelectedItem == null) return;
             string name = MarksListBox.SelectedItem.ToString();
             foreach(Mark mk in marks)
             {

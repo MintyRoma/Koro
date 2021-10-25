@@ -165,6 +165,7 @@ namespace Testo.Forms
 
         private void TasksListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
+            if (TasksListBox.SelectedItem == null) return;
             taskfile = TasksListBox.SelectedItem.ToString();
             Mode = Type.Tasks;
         }

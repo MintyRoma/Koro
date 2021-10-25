@@ -410,13 +410,25 @@ namespace Testo.Forms.SetingsPages
             }
             else
             {
-                int position = answers.IndexOf(oldAnsName);
-                answers[position] = AnswerNameTxtbox.Text;
-                if (right.Contains(oldAnsName))
+                int position = 0;
+                if (type == TaskType.String)
                 {
-                    int index = right.IndexOf(oldAnsName);
-                    right[index] = AnswerNameTxtbox.Text;
+                    answers.Clear();
+                    answers.Add(AnswerNameTxtbox.Text);
+                    right.Clear();
+                    right.Add(AnswerNameTxtbox.Text);
                 }
+                else
+                {
+                    position = answers.IndexOf(oldAnsName);
+                    answers[position] = AnswerNameTxtbox.Text;
+                    if (right.Contains(oldAnsName))
+                    {
+                        int index = right.IndexOf(oldAnsName);
+                        right[index] = AnswerNameTxtbox.Text;
+                    }
+                }
+                               
                 ConstructData();
                 AnswersListBox.SelectedIndex = position;
             }
@@ -499,6 +511,11 @@ namespace Testo.Forms.SetingsPages
             int position = (int)AnswerUpDown.Value;
             answers.Remove(ans);
             answers.Insert(position - 1, ans);
+        }
+
+        private void AnswerNameTxtbox_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

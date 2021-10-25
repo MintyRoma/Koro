@@ -15,28 +15,15 @@ namespace Testo.Forms.SetingsPages
 {
     public partial class SubjectsListingPanel : SetingsPanel
     {
-
+        
         private SetingsPanel sp;
+        private string oldfilename = "";
 
         List<string> files = new List<string>();
         public SubjectsListingPanel()
         {
             InitializeComponent();
-            string[] Subs = { };
-            if (!Directory.Exists("Subjects")) Directory.CreateDirectory("Subjects");
-            Subs = Directory.GetFiles("Subjects");
-            foreach (string fil in Subs)
-            {
-                if (!(fil.EndsWith(".sbj"))) continue;
-                else
-                {
-                    files.Add((fil.Substring(0, fil.Length - ".fos".Length)).Split('\\')[1]);
-                }
-            }
-            foreach (string fl in files)
-            {
-                SubjectsList.Items.Add(fl);
-            }
+            UpdateListing();
             EditSub.Enabled = false;
             DelSub.Enabled = false;
         }
@@ -123,6 +110,7 @@ namespace Testo.Forms.SetingsPages
 
         private void BuildSubject(object sender, FormClosedEventArgs e)
         {
+            
             //Get SubjectName
             string SubjectName = "";
             string manfile = File.ReadAllText(@".\runtime\manifest.json");
@@ -152,18 +140,40 @@ namespace Testo.Forms.SetingsPages
                 if (files.IndexOf(file) == files.Count - 1) hashconstructor.TransformFinalBlock(data, 0, data.Length);
                 else hashconstructor.TransformBlock(data, 0, data.Length, data, 0);
             }
-            File.WriteAllText(@".\runtime\signature", $"sig: {BitConverter.ToString(hashconstructor.Hash).ToUpper()}");
+            File.WriteAllText(@".\runtime\signature", $"{BitConverter.ToString(hashconstructor.Hash).ToUpper()}");
 
             //Build archive
             if (File.Exists("archive.zip")) File.Delete("archive.zip");
             ZipFile arch = new ZipFile("archive.zip");
+            arch.AlternateEncoding = Encoding.UTF8;
+            arch.AlternateEncodingUsage = ZipOption.AsNecessary;
             arch.AddDirectory(@".\runtime");
             arch.Save();
+            arch.Dispose();
 
             //Secure archive
             byte[] reverse = File.ReadAllBytes("archive.zip");
             byte[] export = reverse.Reverse().ToArray();
-            File.WriteAllBytes($@".\Subjects\{SubjectName}.tsf",export);
+            if (File.Exists(oldfilename)) File.Delete(oldfilename);
+            File.WriteAllBytes($@".\Subjects\{SubjectName}.ksf",export);
+
+            //Clearing
+            File.Delete("archive.zip");
+            Directory.Delete("runtime", true);
+
+            UpdateListing();
+        }
+
+        private void UpdateListing()
+        {
+            SubjectsList.Items.Clear();
+            List<string> subs = new List<string>();
+            subs = Directory.GetFiles(@".\Subjects", "*.ksf").ToList();
+            foreach (string filename in subs)
+            {
+                string name  = Path.GetFileName(filename.Substring(0,filename.Length-".ksf".Length));
+                SubjectsList.Items.Add(name);
+            }
         }
 
         private void ClosedEdit()
@@ -183,10 +193,63 @@ namespace Testo.Forms.SetingsPages
 
         private void EditSub_Click(object sender, EventArgs e)
         {
-            string file = Directory.GetCurrentDirectory()+"\\Subjects\\"+(string)SubjectsList.Items[SubjectsList.SelectedIndex] + ".sbj";
-            Classes.Subject sub = new Classes.Subject();
-            sub.Import(file);
-            EditSubjectForm sb = new EditSubjectForm(sub);
+            if (SubjectsList.SelectedItem == null) return;
+            string filename = SubjectsList.SelectedItem.ToString();
+            UnpackFile(filename);
+        }
+
+        private void UnpackFile(string filename)
+        {
+            oldfilename = @".\Subjects\" + filename + ".ksf";
+            byte[] ksf = File.ReadAllBytes(oldfilename);
+            File.WriteAllBytes("archive.zip",ksf.Reverse().ToArray());
+            ZipFile zf = new ZipFile("archive.zip");
+            zf.AlternateEncoding = Encoding.UTF8;
+            zf.AlternateEncodingUsage = ZipOption.AsNecessary;
+            zf.ExtractAll(@".\runtime\",ExtractExistingFileAction.OverwriteSilently);
+            zf.Dispose();
+            EditSubjectForm edit = new EditSubjectForm();
+            edit.FormClosed += BuildSubject;
+            edit.ShowDialog();
+        }
+
+        private void DelSub_Click(object sender, EventArgs e)
+        {
+            if (SubjectsList.SelectedIndex == null) return;
+            string filename = SubjectsList.SelectedItem.ToString();
+            if (File.Exists(@".\Subjects\" + filename + ".ksf")) File.Delete(@".\Subjects\" + filename + ".ksf");
+            UpdateListing();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            if (SubjectsList.SelectedItem == null) return;
+            string filename = SubjectsList.SelectedItem.ToString();
+            if (File.Exists(@".\Subjects\"+filename+".ksf"))
+            {
+                SaveFileDialog sd = new SaveFileDialog();
+                sd.FileName = filename;
+                sd.Filter = "Файлы предметов Kuro|*.ksf";
+                DialogResult res = sd.ShowDialog();
+                if (res==DialogResult.OK)
+                {
+                    string saveto = sd.FileName;
+                    File.Copy(@".\Subjects\" + filename + ".ksf", saveto);
+                }
+            }
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            OpenFileDialog od = new OpenFileDialog();
+            od.Filter = "Файлы предметов Kuro|*.ksf";
+            DialogResult res = od.ShowDialog();
+            if (res==DialogResult.OK)
+            {
+                string file = od.FileName;
+                File.Copy(file, @".\Subjects\" + Path.GetFileName(file));
+            }
+            UpdateListing();
         }
     }
 }

@@ -407,7 +407,7 @@
             this.panel4.Size = new System.Drawing.Size(604, 63);
             this.panel4.TabIndex = 4;
             // 
-            // EditSub
+            // EditSubjectPage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -415,8 +415,8 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "EditSub";
-            this.Size = new System.Drawing.Size(604, 608);
+            this.Name = "EditSubjectPage";
+            this.Size = new System.Drawing.Size(604, 641);
             this.Load += new System.EventHandler(this.EditSub_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
