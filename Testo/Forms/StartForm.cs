@@ -106,11 +106,12 @@ namespace Testo
             }
 
             List<string> subjects = new List<string>();
+            files = Directory.GetFiles(@".\Subjects\").ToList();
             foreach (string filename in files)
             {
-                if (filename.EndsWith(".sbj"))
+                if (Path.GetExtension(filename)==".ksf")
                 {
-                    subjects.Add(filename.Replace(@"Subjects\","").Replace(".sbj",""));
+                    subjects.Add(Path.GetFileName(filename).Replace(".ksf", ""));
                 }
             }
             if (subjects.Count() < 1)
