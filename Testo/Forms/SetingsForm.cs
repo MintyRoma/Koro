@@ -5,11 +5,11 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using Testo.Classes;
+using Koro.Classes;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class SetingsForm : MetroForm
     {

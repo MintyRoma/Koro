@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using System.Xml;
 using Ionic.Zip;
 
-namespace Testo.Classes
+namespace Koro.Classes
 {
     public class Subject
     {

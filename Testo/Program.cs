@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;
 using System.IO;
-using Testo.Forms;
+using Koro.Forms;
 
-namespace Testo
+namespace Koro
 {
     static class Program
     {

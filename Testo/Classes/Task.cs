@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Testo.Classes
+namespace Koro.Classes
 {
     public class Task
     {

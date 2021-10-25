@@ -1,4 +1,4 @@
-﻿namespace Testo.Forms
+﻿namespace Koro.Forms
 {
     partial class SecurityForm
     {
@@ -79,7 +79,7 @@
             this.passwordTxtBox.CustomButton.UseSelectable = true;
             this.passwordTxtBox.DisplayIcon = true;
             this.passwordTxtBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.passwordTxtBox.Icon = global::Testo.Properties.Resources.Login2;
+            this.passwordTxtBox.Icon = global::Koro.Properties.Resources.Login2;
             this.passwordTxtBox.IconRight = true;
             this.passwordTxtBox.Lines = new string[0];
             this.passwordTxtBox.Location = new System.Drawing.Point(90, 71);
@@ -122,7 +122,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Testo.Properties.Resources.shield1;
+            this.pictureBox1.Image = global::Koro.Properties.Resources.shield1;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(524, 129);

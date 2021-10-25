@@ -1,4 +1,4 @@
-﻿namespace Testo.Forms
+﻿namespace Koro.Forms
 {
     partial class SetingsForm
     {
@@ -62,7 +62,7 @@
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitBtn.ForeColor = System.Drawing.Color.Crimson;
-            this.ExitBtn.Image = global::Testo.Properties.Resources.log_out;
+            this.ExitBtn.Image = global::Koro.Properties.Resources.log_out;
             this.ExitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ExitBtn.Location = new System.Drawing.Point(0, 205);
             this.ExitBtn.Name = "ExitBtn";
@@ -81,7 +81,7 @@
             this.UsersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UsersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersBtn.ForeColor = System.Drawing.Color.Black;
-            this.UsersBtn.Image = global::Testo.Properties.Resources.users;
+            this.UsersBtn.Image = global::Koro.Properties.Resources.users;
             this.UsersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UsersBtn.Location = new System.Drawing.Point(0, 164);
             this.UsersBtn.Name = "UsersBtn";
@@ -99,7 +99,7 @@
             this.GraphBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GraphBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GraphBtn.ForeColor = System.Drawing.Color.Black;
-            this.GraphBtn.Image = global::Testo.Properties.Resources.trending_up;
+            this.GraphBtn.Image = global::Koro.Properties.Resources.trending_up;
             this.GraphBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GraphBtn.Location = new System.Drawing.Point(0, 123);
             this.GraphBtn.Name = "GraphBtn";
@@ -117,7 +117,7 @@
             this.History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.History.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.History.ForeColor = System.Drawing.Color.Black;
-            this.History.Image = global::Testo.Properties.Resources.calendar;
+            this.History.Image = global::Koro.Properties.Resources.calendar;
             this.History.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.History.Location = new System.Drawing.Point(0, 82);
             this.History.Name = "History";
@@ -135,7 +135,7 @@
             this.SubjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubjectsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubjectsBtn.ForeColor = System.Drawing.Color.Black;
-            this.SubjectsBtn.Image = global::Testo.Properties.Resources.database;
+            this.SubjectsBtn.Image = global::Koro.Properties.Resources.database;
             this.SubjectsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubjectsBtn.Location = new System.Drawing.Point(0, 41);
             this.SubjectsBtn.Name = "SubjectsBtn";
@@ -154,7 +154,7 @@
             this.ProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ProfileBtn.ForeColor = System.Drawing.Color.Black;
-            this.ProfileBtn.Image = global::Testo.Properties.Resources.briefcase;
+            this.ProfileBtn.Image = global::Koro.Properties.Resources.briefcase;
             this.ProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProfileBtn.Location = new System.Drawing.Point(0, 0);
             this.ProfileBtn.Name = "ProfileBtn";

@@ -11,7 +11,7 @@ using System.Security.Cryptography;
 using Ionic.Zip;
 using Newtonsoft.Json;
 
-namespace Testo.Forms.SetingsPages
+namespace Koro.Forms.SetingsPages
 {
     public partial class SubjectsListingPanel : SetingsPanel
     {
@@ -229,7 +229,7 @@ namespace Testo.Forms.SetingsPages
             {
                 SaveFileDialog sd = new SaveFileDialog();
                 sd.FileName = filename;
-                sd.Filter = "Файлы предметов Kuro|*.ksf";
+                sd.Filter = "Файлы предметов Koro|*.ksf";
                 DialogResult res = sd.ShowDialog();
                 if (res==DialogResult.OK)
                 {
@@ -242,7 +242,7 @@ namespace Testo.Forms.SetingsPages
         private void button1_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog od = new OpenFileDialog();
-            od.Filter = "Файлы предметов Kuro|*.ksf";
+            od.Filter = "Файлы предметов Koro|*.ksf";
             DialogResult res = od.ShowDialog();
             if (res==DialogResult.OK)
             {

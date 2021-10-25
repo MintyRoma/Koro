@@ -7,12 +7,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.IO;
-using Testo.Forms;
+using Koro.Forms;
 using MetroFramework.Forms;
 using MetroFramework.Controls;
-using Testo.Classes;
+using Koro.Classes;
 
-namespace Testo
+namespace Koro
 {
     public partial class Start : MetroForm
     {

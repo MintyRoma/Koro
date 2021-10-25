@@ -1,4 +1,4 @@
-﻿namespace Testo.Forms
+﻿namespace Koro.Forms
 {
     partial class NoUACConfirmationForm
     {

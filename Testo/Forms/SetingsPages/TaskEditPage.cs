@@ -6,11 +6,11 @@ using System.Data;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Testo.Classes;
+using Koro.Classes;
 using System.IO;
 using Newtonsoft.Json;
 
-namespace Testo.Forms.SetingsPages
+namespace Koro.Forms.SetingsPages
 {
     public partial class TaskEditPage : SetingsPanel, IEditSubForm
     {
@@ -327,7 +327,7 @@ namespace Testo.Forms.SetingsPages
 
         public void Reconstruct()
         {
-            File.WriteAllBytes(jsonfile, Testo.Properties.Resources.marks);
+            File.WriteAllBytes(jsonfile, Koro.Properties.Resources.marks);
             Import();
         }
 

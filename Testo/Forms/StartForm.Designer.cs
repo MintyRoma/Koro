@@ -1,4 +1,4 @@
-﻿namespace Testo
+﻿namespace Koro
 {
     partial class Start
     {
@@ -217,7 +217,7 @@
             // GoToGit
             // 
             this.GoToGit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.GoToGit.Image = global::Testo.Properties.Resources.git;
+            this.GoToGit.Image = global::Koro.Properties.Resources.git;
             this.GoToGit.Location = new System.Drawing.Point(0, 0);
             this.GoToGit.Name = "GoToGit";
             this.GoToGit.Size = new System.Drawing.Size(26, 20);
@@ -231,7 +231,7 @@
             // GoToSetings
             // 
             this.GoToSetings.Dock = System.Windows.Forms.DockStyle.Right;
-            this.GoToSetings.Image = global::Testo.Properties.Resources.settings;
+            this.GoToSetings.Image = global::Koro.Properties.Resources.settings;
             this.GoToSetings.Location = new System.Drawing.Point(630, 0);
             this.GoToSetings.Name = "GoToSetings";
             this.GoToSetings.Size = new System.Drawing.Size(40, 20);

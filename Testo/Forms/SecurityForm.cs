@@ -6,10 +6,10 @@ using System.IO;
 using System.Xml;
 using MetroFramework.Forms;
 using System.Security.Cryptography;
-using Testo.Classes;
+using Koro.Classes;
 using System.Drawing;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class SecurityForm : MetroForm
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace Testo.Forms.SetingsPages
+namespace Koro.Forms.SetingsPages
 {
     partial class MarksSetup
     {

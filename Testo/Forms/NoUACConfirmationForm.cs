@@ -8,7 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class NoUACConfirmationForm : MetroForm
     {

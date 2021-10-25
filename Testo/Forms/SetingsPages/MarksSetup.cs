@@ -9,10 +9,10 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
-using Testo.Classes;
-using Testo.Forms.Components;
+using Koro.Classes;
+using Koro.Forms.Components;
 
-namespace Testo.Forms.SetingsPages
+namespace Koro.Forms.SetingsPages
 {
     public partial class MarksSetup : SetingsPanel, IEditSubForm
     {
@@ -131,7 +131,7 @@ namespace Testo.Forms.SetingsPages
 
         public void Reconstruct()
         {
-            File.WriteAllBytes(RuntimeDir + "\\marks.json", Testo.Properties.Resources.marks);
+            File.WriteAllBytes(RuntimeDir + "\\marks.json", Koro.Properties.Resources.marks);
             Import();
         }
 

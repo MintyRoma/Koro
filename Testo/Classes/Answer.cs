@@ -4,7 +4,7 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Testo.Classes
+namespace Koro.Classes
 {
     public class Answer
     {

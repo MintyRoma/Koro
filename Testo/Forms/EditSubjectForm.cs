@@ -2,13 +2,13 @@
 using System;
 using System.Collections.Generic;
 using System.Windows.Forms;
-using Testo.Classes;
-using Testo.Forms.SetingsPages;
+using Koro.Classes;
+using Koro.Forms.SetingsPages;
 using System.IO;
 using Newtonsoft.Json;
 
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class EditSubjectForm : MetroForm
     {
@@ -87,8 +87,8 @@ namespace Testo.Forms
         private void GenerateNewSubject()
         {
             
-            File.WriteAllBytes(rntdir+"\\manifest.json",Testo.Properties.Resources.manifest);
-            File.WriteAllBytes(rntdir+"\\marks.json", Testo.Properties.Resources.marks);
+            File.WriteAllBytes(rntdir+"\\manifest.json",Koro.Properties.Resources.manifest);
+            File.WriteAllBytes(rntdir+"\\marks.json", Koro.Properties.Resources.marks);
             Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\runtime\\media");
             Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\runtime\\tasks");
         }
@@ -120,7 +120,7 @@ namespace Testo.Forms
             int num = rnd.Next(0, 956633);
             string filename = $"Задание #{num}";
             TasksListBox.Items.Add(filename);
-            File.WriteAllBytes(rntdir + $"\\tasks\\{filename}.json", Testo.Properties.Resources.task);
+            File.WriteAllBytes(rntdir + $"\\tasks\\{filename}.json", Koro.Properties.Resources.task);
         }
 
         private void History_Click(object sender, EventArgs e)

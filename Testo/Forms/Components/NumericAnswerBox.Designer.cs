@@ -1,5 +1,5 @@
 ﻿
-namespace Testo.Forms.Components
+namespace Koro.Forms.Components
 {
     partial class NumericAnswerBox
     {

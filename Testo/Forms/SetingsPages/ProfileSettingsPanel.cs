@@ -1,13 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using Testo.Classes;
+using Koro.Classes;
 using System.Windows.Forms;
 using System.IO;
 using System.Xml;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace Testo.Forms.SetingsPages
+namespace Koro.Forms.SetingsPages
 {
     public partial class ProfileSettingsPanel : SetingsPanel
     {

@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Avalonia.0.8.2\build\Avalonia.props" Condition="Exists('..\packages\Avalonia.0.8.2\build\Avalonia.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4D29F928-29DA-40C3-AD27-42A1C3E07924}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Koro</RootNamespace>
+    <AssemblyName>Koro</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Koro.Program</StartupObject>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DotNetZip, Version=1.13.8.0, Culture=neutral, PublicKeyToken=6583c7c814667745, processorArchitecture=MSIL">
+      <HintPath>..\packages\DotNetZip.1.13.8\lib\net40\DotNetZip.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net40\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\Answer.cs" />
+    <Compile Include="Classes\DefaultMessages.cs" />
+    <Compile Include="Classes\IAnswerEditor.cs" />
+    <Compile Include="Classes\IEditSubForm.cs" />
+    <Compile Include="Classes\Mark.cs" />
+    <Compile Include="Classes\MarksManifest.cs" />
+    <Compile Include="Classes\MarkSystem.cs" />
+    <Compile Include="Classes\Subject.cs" />
+    <Compile Include="Classes\SubjectManifest.cs" />
+    <Compile Include="Classes\Task.cs" />
+    <Compile Include="Classes\TaskManifest.cs" />
+    <Compile Include="Classes\TaskType.cs" />
+    <Compile Include="Classes\Teacher.cs" />
+    <Compile Include="Forms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Components\NumericAnswerBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\Components\NumericAnswerBox.Designer.cs">
+      <DependentUpon>NumericAnswerBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\RuntimeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\RuntimeForm.Designer.cs">
+      <DependentUpon>RuntimeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\MarksSetup.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\MarksSetup.Designer.cs">
+      <DependentUpon>MarksSetup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetUpForm.Designer.cs">
+      <DependentUpon>SetUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NoProfilesForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NoProfilesForm.Designer.cs">
+      <DependentUpon>NoProfilesForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\NoUACConfirmationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\NoUACConfirmationForm.Designer.cs">
+      <DependentUpon>NoUACConfirmationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SecurityForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SecurityForm.Designer.cs">
+      <DependentUpon>SecurityForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsForm.Designer.cs">
+      <DependentUpon>SetingsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\EditSubjectPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\EditSubjectPage.Designer.cs">
+      <DependentUpon>EditSubjectPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\ProfileSettingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\ProfileSettingsPanel.Designer.cs">
+      <DependentUpon>ProfileSettingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\SetingsPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\SetingsPanel.Designer.cs">
+      <DependentUpon>SetingsPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\TaskEditPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\TaskEditPage.Designer.cs">
+      <DependentUpon>TaskEditPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\SubjectListingPage.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Forms\SetingsPages\SubjectListingPage.Designer.cs">
+      <DependentUpon>SubjectListingPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StartForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\StartForm.Designer.cs">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EditSubjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\EditSubjectForm.Designer.cs">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\Components\NumericAnswerBox.resx">
+      <DependentUpon>NumericAnswerBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\RuntimeForm.resx">
+      <DependentUpon>RuntimeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\MarksSetup.resx">
+      <DependentUpon>MarksSetup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetUpForm.resx">
+      <DependentUpon>SetUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NoProfilesForm.resx">
+      <DependentUpon>NoProfilesForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\NoUACConfirmationForm.resx">
+      <DependentUpon>NoUACConfirmationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SecurityForm.resx">
+      <DependentUpon>SecurityForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsForm.resx">
+      <DependentUpon>SetingsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\EditSubjectPage.resx">
+      <DependentUpon>EditSubjectPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\ProfileSettingsPanel.resx">
+      <DependentUpon>ProfileSettingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\SetingsPanel.resx">
+      <DependentUpon>SetingsPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\TaskEditPage.resx">
+      <DependentUpon>TaskEditPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\SetingsPages\SubjectListingPage.resx">
+      <DependentUpon>SubjectListingPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\StartForm.resx">
+      <DependentUpon>StartForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\EditSubjectForm.resx">
+      <DependentUpon>EditSubjectForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\git.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\security.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="imgs\settings.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Icon.ico" />
+    <Content Include="imgs\arrow-left.png" />
+    <Content Include="imgs\briefcase.png" />
+    <Content Include="imgs\calendar.png" />
+    <None Include="Resources\Check.png" />
+    <None Include="Resources\Alert.png" />
+    <None Include="Resources\BD.png" />
+    <None Include="Resources\Login2.png" />
+    <None Include="Resources\Template\manifest.json" />
+    <None Include="Resources\Template\marks.json" />
+    <None Include="Resources\Template\task.json" />
+    <None Include="Resources\Без имени-2.png" />
+    <None Include="Resources\Login1.png" />
+    <None Include="Resources\Login.png" />
+    <None Include="Resources\shield1.png" />
+    <None Include="Resources\shield.png" />
+    <None Include="imgs\code.png" />
+    <Content Include="imgs\database.png" />
+    <Content Include="imgs\edit.png" />
+    <Content Include="imgs\edit_dark.png" />
+    <Content Include="imgs\log-out.png" />
+    <None Include="imgs\marks.png" />
+    <None Include="imgs\plus.png" />
+    <Content Include="imgs\trending-up.png" />
+    <Content Include="imgs\users.png" />
+    <None Include="imgs\StatusSecurityWarning_16x.png" />
+    <None Include="imgs\StatusOK_16x.png" />
+    <None Include="imgs\StatusWarning_16x.png" />
+    <None Include="imgs\FileExclude_16x1.png" />
+    <None Include="imgs\FileExclude_16x.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Данный проект ссылается на пакеты NuGet, отсутствующие на этом компьютере. Используйте восстановление пакетов NuGet, чтобы скачать их.  Дополнительную информацию см. по адресу: http://go.microsoft.com/fwlink/?LinkID=322105. Отсутствует следующий файл: {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Avalonia.0.8.2\build\Avalonia.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.0.8.2\build\Avalonia.targets'))" />
+    <Error Condition="!Exists('..\packages\Avalonia.0.8.2\build\Avalonia.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Avalonia.0.8.2\build\Avalonia.props'))" />
+  </Target>
+  <Import Project="..\packages\Avalonia.0.8.2\build\Avalonia.targets" Condition="Exists('..\packages\Avalonia.0.8.2\build\Avalonia.targets')" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties resources_4template_4manifest_1json__JsonSchema="" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,4 +1,4 @@
-﻿namespace Testo.Forms
+﻿namespace Koro.Forms
 {
     partial class SetUpForm
     {
@@ -156,7 +156,7 @@
             // 
             // ConfirmTxtboxStat
             // 
-            this.ConfirmTxtboxStat.Image = global::Testo.Properties.Resources.Alert;
+            this.ConfirmTxtboxStat.Image = global::Koro.Properties.Resources.Alert;
             this.ConfirmTxtboxStat.Location = new System.Drawing.Point(381, 307);
             this.ConfirmTxtboxStat.Name = "ConfirmTxtboxStat";
             this.ConfirmTxtboxStat.Size = new System.Drawing.Size(31, 33);
@@ -166,7 +166,7 @@
             // 
             // PassTxtboxStat
             // 
-            this.PassTxtboxStat.Image = global::Testo.Properties.Resources.Check;
+            this.PassTxtboxStat.Image = global::Koro.Properties.Resources.Check;
             this.PassTxtboxStat.Location = new System.Drawing.Point(381, 240);
             this.PassTxtboxStat.Name = "PassTxtboxStat";
             this.PassTxtboxStat.Size = new System.Drawing.Size(31, 33);

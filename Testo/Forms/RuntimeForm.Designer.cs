@@ -1,5 +1,5 @@
 ﻿
-namespace Testo.Forms
+namespace Koro.Forms
 {
     partial class RuntimeForm
     {

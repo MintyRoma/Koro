@@ -9,7 +9,7 @@ using System.Windows.Forms;
 using System.Security.Principal;
 using MetroFramework.Forms;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class NoProfilesForm : MetroForm
     {

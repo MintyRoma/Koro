@@ -8,7 +8,7 @@ using System.Text;
 using System.Windows.Forms;
 using MetroFramework.Forms;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class RuntimeForm : MetroForm
     {

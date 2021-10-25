@@ -4,7 +4,7 @@ using System.Data.Odbc;
 using System.Linq;
 using System.Text;
 
-namespace Testo.Classes
+namespace Koro.Classes
 {
     public class Mark
     {

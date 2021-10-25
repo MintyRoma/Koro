@@ -11,7 +11,7 @@ using System.IO;
 using System.Security.Cryptography;
 using MetroFramework.Forms;
 
-namespace Testo.Forms
+namespace Koro.Forms
 {
     public partial class SetUpForm : MetroForm
     {
@@ -31,14 +31,14 @@ namespace Testo.Forms
             ErrMsg.Text = "";
             if (!PassNotNull || !PassConfirmation)
             {
-                PassTxtboxStat.Image = Testo.Properties.Resources.Alert;
+                PassTxtboxStat.Image = Koro.Properties.Resources.Alert;
                 ConfirmTxtboxStat.Image = Properties.Resources.Alert;
                 if (!PassConfirmation) ErrMsg.Text = Classes.DefaultMessages.ERRORWrongPassConfirmation;
                 if (!PassNotNull) ErrMsg.Text = Classes.DefaultMessages.ERRORPassIsNull;
             }
             else
             {
-                PassTxtboxStat.Image = Testo.Properties.Resources.Check;
+                PassTxtboxStat.Image = Koro.Properties.Resources.Check;
                 ConfirmTxtboxStat.Image = Properties.Resources.Check;
             }
         }
