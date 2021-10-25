@@ -168,6 +168,7 @@ namespace Koro.Forms.SetingsPages
             this.AmountUpDown.Name = "AmountUpDown";
             this.AmountUpDown.Size = new System.Drawing.Size(76, 29);
             this.AmountUpDown.TabIndex = 10;
+            this.AmountUpDown.ValueChanged += new System.EventHandler(this.AmountUpDown_ValueChanged);
             this.AmountUpDown.Enter += new System.EventHandler(this.AmountUpDown_Enter);
             this.AmountUpDown.Leave += new System.EventHandler(this.AmountUpDown_Leave);
             // 

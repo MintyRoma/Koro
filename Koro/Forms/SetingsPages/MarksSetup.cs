@@ -113,7 +113,7 @@ namespace Koro.Forms.SetingsPages
                 {
                     dynamic mark = new ExpandoObject();
                     mark.description = mk.Name;
-                    mark.percantage = mk.Percentage;
+                    mark.percentage = mk.Percentage;
                     manif.marks.Add(mark);
                 }
                 string manfile = JsonConvert.SerializeObject(manif);
@@ -154,7 +154,8 @@ namespace Koro.Forms.SetingsPages
                 if (name == mk.Name)
                 {
                     NameTxtBox.Text = mk.Name;
-                    AmountUpDown.Value = (int)(mk.Percentage * 100);
+                    int percent = Convert.ToInt32(mk.Percentage * 100);
+                    AmountUpDown.Value = percent;
                     MarkInfoPanel.Show();
                     return;
                 }
@@ -218,8 +219,10 @@ namespace Koro.Forms.SetingsPages
 
         private void AmountUpDown_Leave(object sender, EventArgs e)
         {
-            int newAmount = (int)AmountUpDown.Value;
+            double newAmount = (double)AmountUpDown.Value/100;
+            string markname = NameTxtBox.Text;
             if (oldamount == newAmount) return;
+            //Check if contains
             foreach (Mark mk in marks)
             {
                 if (newAmount == mk.Percentage)
@@ -231,7 +234,7 @@ namespace Koro.Forms.SetingsPages
             }
             foreach (Mark mk in marks)
             {
-                if (oldamount == mk.Percentage)
+                if (markname == mk.Name)
                 {
                     mk.Percentage = newAmount;
                     break;
@@ -245,6 +248,11 @@ namespace Koro.Forms.SetingsPages
         }
 
         private void NameTxtBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AmountUpDown_ValueChanged(object sender, EventArgs e)
         {
 
         }
