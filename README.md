@@ -1,4 +1,4 @@
-# Testo (WIP)
+# Koro (WIP)
 Just an application to test students.
 
 Very laggy, very slow and with dirty code.
