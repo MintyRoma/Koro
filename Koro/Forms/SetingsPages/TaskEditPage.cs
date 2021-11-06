@@ -89,7 +89,7 @@ namespace Koro.Forms.SetingsPages
                         DialogResult res = MetroFramework.MetroMessageBox.Show(Parent.Parent, "При наличии нескольких вариантов ответа и смены типа ответа на \"Порядок\", все отметки правильных ответов будут заменены на порядок по списку возможных ответов.\nВы уверены, что хотите поменять тип ответа?", "Внимание", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                         if (res == DialogResult.Yes)
                         {
-                            right = answers;
+                            right = answers.GetRange(0,answers.Count);
                         }
                         if (res == DialogResult.No)
                         {
@@ -124,6 +124,7 @@ namespace Koro.Forms.SetingsPages
             ImgsListView.LargeImageList.Images.Clear();
             ImgsListView.MultiSelect = false;
             NameTxtBox.Text = jsonfile.Replace(RuntimeDir, "").Replace(".json","");
+            AnswerUpDown.Minimum = 1;
             TaskDescriptionTxtBox.Text = description;
             string typ = "";
             switch (type)
@@ -179,7 +180,7 @@ namespace Koro.Forms.SetingsPages
 
         }
 
-        private void AddMarkBtn_Click(object sender, EventArgs e)
+        private void AddMediaBtn_Click(object sender, EventArgs e)
         {
             try
             {
@@ -204,7 +205,7 @@ namespace Koro.Forms.SetingsPages
         }
 
 
-        private void DeleteMarkBtn_Click(object sender, EventArgs e)
+        private void DeleteMediaBtn_Click(object sender, EventArgs e)
         {
             if (ImgsListView.SelectedItems == null) return;
             ListViewItem item = ImgsListView.SelectedItems[0];
@@ -480,7 +481,11 @@ namespace Koro.Forms.SetingsPages
 
         private void AddAnswerBtn_Click(object sender, EventArgs e)
         {
-            if (type!=TaskType.String)answers.Add($"Ответ #{AnswersListBox.Items.Count + 1}");
+            if (type != TaskType.String)
+            {
+                answers.Add($"Ответ #{AnswersListBox.Items.Count + 1}");
+                if (type==TaskType.Order) right.Add($"Ответ #{AnswersListBox.Items.Count + 1}");
+            }
             ConstructData();
         }
 
@@ -509,13 +514,30 @@ namespace Koro.Forms.SetingsPages
         {
             string ans = AnswerNameTxtbox.Text;
             int position = (int)AnswerUpDown.Value;
-            answers.Remove(ans);
-            answers.Insert(position - 1, ans);
+            right.Remove(ans);
+            right.Insert(position - 1, ans);
         }
 
         private void AnswerNameTxtbox_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void NameTxtBox_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NameTxtBox_KeyUp(object sender, KeyEventArgs e)
+        {
+            List<char> BannedSymbols = new List<char> { '\\', '/', ':', '*', '?', '"', '<', '>', '|', '+', ',', '.', '%', '@' };
+            foreach(char c in NameTxtBox.Text)
+            {
+                if (BannedSymbols.Contains(c))
+                {
+                    NameTxtBox.Text = NameTxtBox.Text.Replace(Convert.ToString(c), "");
+                }
+            }
         }
     }
 }

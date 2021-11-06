@@ -65,8 +65,8 @@
             this.DeleteAnswerBtn = new System.Windows.Forms.Button();
             this.AddAnswerBtn = new System.Windows.Forms.Button();
             this.panel7 = new System.Windows.Forms.Panel();
-            this.DeleteMarkBtn = new System.Windows.Forms.Button();
-            this.AddMarkBtn = new System.Windows.Forms.Button();
+            this.DeleteMediaBtn = new System.Windows.Forms.Button();
+            this.AddMediaBtn = new System.Windows.Forms.Button();
             this.ImgsListView = new System.Windows.Forms.ListView();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
@@ -242,6 +242,8 @@
             this.NameTxtBox.UseSelectable = true;
             this.NameTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
             this.NameTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.NameTxtBox.Click += new System.EventHandler(this.NameTxtBox_Click);
+            this.NameTxtBox.KeyUp += new System.Windows.Forms.KeyEventHandler(this.NameTxtBox_KeyUp);
             this.NameTxtBox.Leave += new System.EventHandler(this.NameTxtBox_Leave);
             // 
             // label7
@@ -574,8 +576,8 @@
             // 
             // panel7
             // 
-            this.panel7.Controls.Add(this.DeleteMarkBtn);
-            this.panel7.Controls.Add(this.AddMarkBtn);
+            this.panel7.Controls.Add(this.DeleteMediaBtn);
+            this.panel7.Controls.Add(this.AddMediaBtn);
             this.panel7.Controls.Add(this.ImgsListView);
             this.panel7.Controls.Add(this.label3);
             this.panel7.Controls.Add(this.label4);
@@ -585,37 +587,37 @@
             this.panel7.Size = new System.Drawing.Size(604, 233);
             this.panel7.TabIndex = 9;
             // 
-            // DeleteMarkBtn
+            // DeleteMediaBtn
             // 
-            this.DeleteMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.DeleteMarkBtn.FlatAppearance.BorderSize = 0;
-            this.DeleteMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.DeleteMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.DeleteMarkBtn.ForeColor = System.Drawing.Color.Black;
-            this.DeleteMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.DeleteMarkBtn.Location = new System.Drawing.Point(261, 197);
-            this.DeleteMarkBtn.Name = "DeleteMarkBtn";
-            this.DeleteMarkBtn.Size = new System.Drawing.Size(140, 30);
-            this.DeleteMarkBtn.TabIndex = 24;
-            this.DeleteMarkBtn.Text = "Удалить";
-            this.DeleteMarkBtn.UseVisualStyleBackColor = false;
-            this.DeleteMarkBtn.Click += new System.EventHandler(this.DeleteMarkBtn_Click);
+            this.DeleteMediaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.DeleteMediaBtn.FlatAppearance.BorderSize = 0;
+            this.DeleteMediaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteMediaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.DeleteMediaBtn.ForeColor = System.Drawing.Color.Black;
+            this.DeleteMediaBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.DeleteMediaBtn.Location = new System.Drawing.Point(261, 197);
+            this.DeleteMediaBtn.Name = "DeleteMediaBtn";
+            this.DeleteMediaBtn.Size = new System.Drawing.Size(140, 30);
+            this.DeleteMediaBtn.TabIndex = 24;
+            this.DeleteMediaBtn.Text = "Удалить";
+            this.DeleteMediaBtn.UseVisualStyleBackColor = false;
+            this.DeleteMediaBtn.Click += new System.EventHandler(this.DeleteMediaBtn_Click);
             // 
-            // AddMarkBtn
+            // AddMediaBtn
             // 
-            this.AddMarkBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
-            this.AddMarkBtn.FlatAppearance.BorderSize = 0;
-            this.AddMarkBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.AddMarkBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.AddMarkBtn.ForeColor = System.Drawing.Color.White;
-            this.AddMarkBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.AddMarkBtn.Location = new System.Drawing.Point(407, 197);
-            this.AddMarkBtn.Name = "AddMarkBtn";
-            this.AddMarkBtn.Size = new System.Drawing.Size(140, 30);
-            this.AddMarkBtn.TabIndex = 23;
-            this.AddMarkBtn.Text = "Добавить";
-            this.AddMarkBtn.UseVisualStyleBackColor = false;
-            this.AddMarkBtn.Click += new System.EventHandler(this.AddMarkBtn_Click);
+            this.AddMediaBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(174)))), ((int)(((byte)(219)))));
+            this.AddMediaBtn.FlatAppearance.BorderSize = 0;
+            this.AddMediaBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddMediaBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.AddMediaBtn.ForeColor = System.Drawing.Color.White;
+            this.AddMediaBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.AddMediaBtn.Location = new System.Drawing.Point(407, 197);
+            this.AddMediaBtn.Name = "AddMediaBtn";
+            this.AddMediaBtn.Size = new System.Drawing.Size(140, 30);
+            this.AddMediaBtn.TabIndex = 23;
+            this.AddMediaBtn.Text = "Добавить";
+            this.AddMediaBtn.UseVisualStyleBackColor = false;
+            this.AddMediaBtn.Click += new System.EventHandler(this.AddMediaBtn_Click);
             // 
             // ImgsListView
             // 
@@ -707,8 +709,8 @@
         private System.Windows.Forms.ListView ImgsListView;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button DeleteMarkBtn;
-        private System.Windows.Forms.Button AddMarkBtn;
+        private System.Windows.Forms.Button DeleteMediaBtn;
+        private System.Windows.Forms.Button AddMediaBtn;
         private System.Windows.Forms.Panel EditAnswerNamePanel;
         private MetroFramework.Controls.MetroTextBox AnswerNameTxtbox;
         private System.Windows.Forms.Label label11;
