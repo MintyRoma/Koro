@@ -34,19 +34,23 @@
             this.AddTaskBtn = new System.Windows.Forms.Button();
             this.ConfigPanel = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
-            this.MarksBtn = new System.Windows.Forms.Button();
-            this.SubjectsBtn = new System.Windows.Forms.Button();
             this.ProfileBtn = new System.Windows.Forms.Button();
             this.DetailsPanel = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
             this.RefreshBtn = new System.Windows.Forms.Button();
             this.SaveButton = new System.Windows.Forms.Button();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.MoveDown = new System.Windows.Forms.Button();
+            this.MoveUp = new System.Windows.Forms.Button();
+            this.MarksBtn = new System.Windows.Forms.Button();
+            this.SubjectsBtn = new System.Windows.Forms.Button();
             this.menuPanel.SuspendLayout();
             this.panel1.SuspendLayout();
             this.ConfigPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuPanel
@@ -64,6 +68,7 @@
             // panel1
             // 
             this.panel1.Controls.Add(this.TasksListBox);
+            this.panel1.Controls.Add(this.panel4);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel1.Location = new System.Drawing.Point(0, 164);
             this.panel1.Name = "panel1";
@@ -83,7 +88,7 @@
             "test"});
             this.TasksListBox.Location = new System.Drawing.Point(0, 0);
             this.TasksListBox.Name = "TasksListBox";
-            this.TasksListBox.Size = new System.Drawing.Size(210, 311);
+            this.TasksListBox.Size = new System.Drawing.Size(210, 262);
             this.TasksListBox.TabIndex = 15;
             this.TasksListBox.SelectedIndexChanged += new System.EventHandler(this.TasksListBox_SelectedIndexChanged);
             // 
@@ -133,44 +138,6 @@
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // MarksBtn
-            // 
-            this.MarksBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.MarksBtn.FlatAppearance.BorderSize = 0;
-            this.MarksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.MarksBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.MarksBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.MarksBtn.Image = global::Koro.Properties.Resources.marksimg;
-            this.MarksBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarksBtn.Location = new System.Drawing.Point(0, 82);
-            this.MarksBtn.Name = "MarksBtn";
-            this.MarksBtn.Size = new System.Drawing.Size(210, 41);
-            this.MarksBtn.TabIndex = 6;
-            this.MarksBtn.Text = "Оценки";
-            this.MarksBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.MarksBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.MarksBtn.UseVisualStyleBackColor = true;
-            this.MarksBtn.Click += new System.EventHandler(this.History_Click);
-            // 
-            // SubjectsBtn
-            // 
-            this.SubjectsBtn.Dock = System.Windows.Forms.DockStyle.Top;
-            this.SubjectsBtn.FlatAppearance.BorderSize = 0;
-            this.SubjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.SubjectsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.SubjectsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.SubjectsBtn.Image = global::Koro.Properties.Resources.code;
-            this.SubjectsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubjectsBtn.Location = new System.Drawing.Point(0, 41);
-            this.SubjectsBtn.Name = "SubjectsBtn";
-            this.SubjectsBtn.Size = new System.Drawing.Size(210, 41);
-            this.SubjectsBtn.TabIndex = 5;
-            this.SubjectsBtn.Text = "Настройка предмета";
-            this.SubjectsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.SubjectsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.SubjectsBtn.UseVisualStyleBackColor = true;
-            this.SubjectsBtn.Click += new System.EventHandler(this.SubjectsBtn_Click);
             // 
             // ProfileBtn
             // 
@@ -250,6 +217,87 @@
             this.SaveButton.UseVisualStyleBackColor = false;
             this.SaveButton.Click += new System.EventHandler(this.SaveButton_Click);
             // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.MoveDown);
+            this.panel4.Controls.Add(this.MoveUp);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel4.Location = new System.Drawing.Point(0, 262);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(210, 49);
+            this.panel4.TabIndex = 20;
+            // 
+            // MoveDown
+            // 
+            this.MoveDown.BackColor = System.Drawing.Color.White;
+            this.MoveDown.FlatAppearance.BorderSize = 0;
+            this.MoveDown.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MoveDown.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MoveDown.ForeColor = System.Drawing.Color.Black;
+            this.MoveDown.Image = global::Koro.Properties.Resources.arrow_down_line;
+            this.MoveDown.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MoveDown.Location = new System.Drawing.Point(119, 6);
+            this.MoveDown.Name = "MoveDown";
+            this.MoveDown.Size = new System.Drawing.Size(35, 35);
+            this.MoveDown.TabIndex = 22;
+            this.MoveDown.UseVisualStyleBackColor = false;
+            this.MoveDown.Click += new System.EventHandler(this.MoveDown_Click);
+            // 
+            // MoveUp
+            // 
+            this.MoveUp.BackColor = System.Drawing.Color.White;
+            this.MoveUp.FlatAppearance.BorderSize = 0;
+            this.MoveUp.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MoveUp.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MoveUp.ForeColor = System.Drawing.Color.Black;
+            this.MoveUp.Image = global::Koro.Properties.Resources.arrow_up_line;
+            this.MoveUp.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MoveUp.Location = new System.Drawing.Point(160, 6);
+            this.MoveUp.Name = "MoveUp";
+            this.MoveUp.Size = new System.Drawing.Size(35, 35);
+            this.MoveUp.TabIndex = 21;
+            this.MoveUp.UseVisualStyleBackColor = false;
+            this.MoveUp.Click += new System.EventHandler(this.MoveUp_Click);
+            // 
+            // MarksBtn
+            // 
+            this.MarksBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.MarksBtn.FlatAppearance.BorderSize = 0;
+            this.MarksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.MarksBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.MarksBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.MarksBtn.Image = global::Koro.Properties.Resources.marksimg;
+            this.MarksBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MarksBtn.Location = new System.Drawing.Point(0, 82);
+            this.MarksBtn.Name = "MarksBtn";
+            this.MarksBtn.Size = new System.Drawing.Size(210, 41);
+            this.MarksBtn.TabIndex = 6;
+            this.MarksBtn.Text = "Оценки";
+            this.MarksBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.MarksBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.MarksBtn.UseVisualStyleBackColor = true;
+            this.MarksBtn.Click += new System.EventHandler(this.History_Click);
+            // 
+            // SubjectsBtn
+            // 
+            this.SubjectsBtn.Dock = System.Windows.Forms.DockStyle.Top;
+            this.SubjectsBtn.FlatAppearance.BorderSize = 0;
+            this.SubjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.SubjectsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.SubjectsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
+            this.SubjectsBtn.Image = global::Koro.Properties.Resources.code;
+            this.SubjectsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubjectsBtn.Location = new System.Drawing.Point(0, 41);
+            this.SubjectsBtn.Name = "SubjectsBtn";
+            this.SubjectsBtn.Size = new System.Drawing.Size(210, 41);
+            this.SubjectsBtn.TabIndex = 5;
+            this.SubjectsBtn.Text = "Настройка предмета";
+            this.SubjectsBtn.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.SubjectsBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.SubjectsBtn.UseVisualStyleBackColor = true;
+            this.SubjectsBtn.Click += new System.EventHandler(this.SubjectsBtn_Click);
+            // 
             // EditSubjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -267,6 +315,7 @@
             this.ConfigPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -287,5 +336,8 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Button RefreshBtn;
         private System.Windows.Forms.Button SaveButton;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button MoveUp;
+        private System.Windows.Forms.Button MoveDown;
     }
 }

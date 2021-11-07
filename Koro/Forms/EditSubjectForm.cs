@@ -12,6 +12,8 @@ namespace Koro.Forms
 {
     public partial class EditSubjectForm : MetroForm
     {
+
+        int selectedTaskIndex = -1;
         public enum Type
         {
             Setup,
@@ -62,6 +64,7 @@ namespace Koro.Forms
                     DetailsPanel.Controls.Add(ms);
                     break;
                 case Type.Tasks:
+                    taskfile = TasksListBox.Items.IndexOf(taskfile) + ";" + taskfile;
                     TaskEditPage tp = new TaskEditPage(taskfile);
                     tp.Disposed+=TaskDeleted;
                     DetailsPanel.Controls.Add(tp);
@@ -76,12 +79,47 @@ namespace Koro.Forms
 
         private void UpdateTasksList()
         {
+            if (!CheckOrdering()) ReBuildOrder();
             TasksListBox.Items.Clear();
             string[] files = Directory.GetFiles(rntdir+"\\tasks");
             foreach(string f in files)
             {
-                TasksListBox.Items.Add(Path.GetFileName(f).Replace(".json",""));
+                string title = Path.GetFileName(f).Replace(".json", "");
+                int sep = title.IndexOf(';');
+                title = title.Remove(0, sep+1);
+                TasksListBox.Items.Add(title);
             }
+        }
+
+        private void ReBuildOrder()
+        {
+            int locator = 0;
+            foreach(string filepath in Directory.GetFiles(rntdir + "\\tasks\\"))
+            {
+                string filename = Path.GetFileName(filepath);
+                int separator = filename.IndexOf(';');
+                int actualID = Convert.ToInt32(filename.Substring(0, separator));
+                if (locator!=actualID)
+                {
+                    string newfilename = filename.Replace(actualID + ";", locator + ";");
+                    File.Move(rntdir+"\\tasks\\"+filename, rntdir + "\\tasks\\" + newfilename);
+                }
+                locator++;
+            }
+        }
+
+        private bool CheckOrdering()
+        {
+            int locator = 0;
+            foreach (string filename in Directory.GetFiles(rntdir+"\\tasks\\"))
+            {
+                if (!filename.Contains(Convert.ToString(locator)+";"))
+                {
+                    return false;
+                }
+                locator++;
+            }
+            return true;
         }
 
         private void GenerateNewSubject()
@@ -93,10 +131,6 @@ namespace Koro.Forms
             Directory.CreateDirectory(Directory.GetCurrentDirectory() + "\\runtime\\tasks");
         }
 
-        public EditSubjectForm(Classes.Subject sub)
-        {
-            InitializeComponent();
-        }
 
         private void EditSubjectForm_Load(object sender, EventArgs e)
         {
@@ -118,9 +152,9 @@ namespace Koro.Forms
         {
             Random rnd = new Random();
             int num = rnd.Next(0, 956633);
-            string filename = $"Задание #{num}";
-            TasksListBox.Items.Add(filename);
+            string filename = $"{TasksListBox.Items.Count};Задание #{num}";
             File.WriteAllBytes(rntdir + $"\\tasks\\{filename}.json", Koro.Properties.Resources.task);
+            UpdateTasksList();
         }
 
         private void History_Click(object sender, EventArgs e)
@@ -166,8 +200,51 @@ namespace Koro.Forms
         private void TasksListBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             if (TasksListBox.SelectedItem == null) return;
+            if (TasksListBox.SelectedIndex == selectedTaskIndex) return;
+            selectedTaskIndex = TasksListBox.SelectedIndex;
             taskfile = TasksListBox.SelectedItem.ToString();
             Mode = Type.Tasks;
+            TasksListBox.SetSelected(selectedTaskIndex,true);
+        }
+
+        private void MoveUp_Click(object sender, EventArgs e)
+        {
+            if (TasksListBox.SelectedItem == null) return;
+            if (TasksListBox.SelectedIndex == 0) return;
+
+            int position = TasksListBox.SelectedIndex;
+            string[] files = Directory.GetFiles(rntdir+"\\tasks\\");
+
+            string toCopy = files[position];
+            string toMove = files[position - 1];
+
+            string newname = toMove.Replace(Convert.ToString(position - 1)+";", Convert.ToString(position)+";");
+            File.Move(toCopy, toCopy + ".upd");
+            File.Move(toMove, newname);
+            string selectedname = toCopy.Replace(Convert.ToString(position)+";", Convert.ToString(position - 1)+";");
+            File.Move(toCopy + ".upd", selectedname);
+
+            UpdateTasksList();
+        }
+
+        private void MoveDown_Click(object sender, EventArgs e)
+        {
+            if (TasksListBox.SelectedItem == null) return;
+            if (TasksListBox.SelectedIndex == TasksListBox.Items.Count-1) return;
+
+            int position = TasksListBox.SelectedIndex;
+            string[] files = Directory.GetFiles(rntdir + "\\tasks\\");
+
+            string toCopy = files[position];
+            string toMove = files[position + 1];
+
+            string newname = toMove.Replace(Convert.ToString(position + 1)+";", Convert.ToString(position)+";");
+            File.Move(toCopy, toCopy + ".upd");
+            File.Move(toMove, newname);
+            string selectedname = toCopy.Replace(Convert.ToString(position)+";", Convert.ToString(position + 1)+";");
+            File.Move(toCopy + ".upd", selectedname);
+
+            UpdateTasksList();
         }
     }
 }

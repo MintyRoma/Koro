@@ -265,7 +265,9 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon.ico" />
+    <None Include="imgs\arrow-down-line.png" />
     <Content Include="imgs\arrow-left.png" />
+    <None Include="imgs\arrow-up-line.png" />
     <Content Include="imgs\briefcase.png" />
     <Content Include="imgs\calendar.png" />
     <None Include="Resources\Check.png" />

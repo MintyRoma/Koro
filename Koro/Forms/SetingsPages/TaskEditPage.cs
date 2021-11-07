@@ -17,6 +17,7 @@ namespace Koro.Forms.SetingsPages
         private string jsonfile;
         private string RuntimeDir = @".\runtime\tasks\";
         private string oldFilename = "";
+        private int ID = 0;
 
         private string name;
         private string description;
@@ -111,7 +112,9 @@ namespace Koro.Forms.SetingsPages
 
         public TaskEditPage(string filename)
         {
-            name = filename;
+            int separator = filename.IndexOf(";");
+            ID = Convert.ToInt32(filename.Substring(0, separator));
+            name = filename.Substring(separator+1);
             jsonfile = RuntimeDir + filename + ".json";
             InitializeComponent();
             ImgsListView.LargeImageList = new ImageList();
@@ -123,7 +126,7 @@ namespace Koro.Forms.SetingsPages
             ImgsListView.Items.Clear();
             ImgsListView.LargeImageList.Images.Clear();
             ImgsListView.MultiSelect = false;
-            NameTxtBox.Text = jsonfile.Replace(RuntimeDir, "").Replace(".json","");
+            NameTxtBox.Text = name;
             AnswerUpDown.Minimum = 1;
             TaskDescriptionTxtBox.Text = description;
             string typ = "";
@@ -475,7 +478,7 @@ namespace Koro.Forms.SetingsPages
         private void NameTxtBox_Leave(object sender, EventArgs e)
         {
             oldFilename = jsonfile;
-            jsonfile = RuntimeDir + NameTxtBox.Text + ".json";
+            jsonfile = RuntimeDir + ID + ";" +NameTxtBox.Text + ".json";
             name = NameTxtBox.Text;
         }
 
@@ -530,7 +533,7 @@ namespace Koro.Forms.SetingsPages
 
         private void NameTxtBox_KeyUp(object sender, KeyEventArgs e)
         {
-            List<char> BannedSymbols = new List<char> { '\\', '/', ':', '*', '?', '"', '<', '>', '|', '+', ',', '.', '%', '@' };
+            List<char> BannedSymbols = new List<char> { '\\', '/', ':', '*', '?', '"', '<', '>', '|', '+', ',', '.', '%', '@',';', };
             foreach(char c in NameTxtBox.Text)
             {
                 if (BannedSymbols.Contains(c))
