@@ -30,8 +30,8 @@
         {
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.passwordTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.statuslabel = new System.Windows.Forms.TextBox();
+            this.passwordTxtBox = new MetroFramework.Controls.MetroTextBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -64,45 +64,6 @@
             this.panel1.Size = new System.Drawing.Size(512, 179);
             this.panel1.TabIndex = 1;
             // 
-            // passwordTxtBox
-            // 
-            // 
-            // 
-            // 
-            this.passwordTxtBox.CustomButton.Image = null;
-            this.passwordTxtBox.CustomButton.Location = new System.Drawing.Point(298, 2);
-            this.passwordTxtBox.CustomButton.Name = "";
-            this.passwordTxtBox.CustomButton.Size = new System.Drawing.Size(25, 25);
-            this.passwordTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
-            this.passwordTxtBox.CustomButton.TabIndex = 1;
-            this.passwordTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
-            this.passwordTxtBox.CustomButton.UseSelectable = true;
-            this.passwordTxtBox.DisplayIcon = true;
-            this.passwordTxtBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
-            this.passwordTxtBox.Icon = global::Koro.Properties.Resources.Login2;
-            this.passwordTxtBox.IconRight = true;
-            this.passwordTxtBox.Lines = new string[0];
-            this.passwordTxtBox.Location = new System.Drawing.Point(90, 71);
-            this.passwordTxtBox.MaxLength = 32767;
-            this.passwordTxtBox.Name = "passwordTxtBox";
-            this.passwordTxtBox.PasswordChar = '•';
-            this.passwordTxtBox.WaterMark = "Введите пароль здесь";
-            this.passwordTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
-            this.passwordTxtBox.SelectedText = "";
-            this.passwordTxtBox.SelectionLength = 0;
-            this.passwordTxtBox.SelectionStart = 0;
-            this.passwordTxtBox.ShortcutsEnabled = true;
-            this.passwordTxtBox.ShowButton = true;
-            this.passwordTxtBox.ShowClearButton = true;
-            this.passwordTxtBox.Size = new System.Drawing.Size(326, 30);
-            this.passwordTxtBox.Style = MetroFramework.MetroColorStyle.Yellow;
-            this.passwordTxtBox.TabIndex = 1;
-            this.passwordTxtBox.UseSelectable = true;
-            this.passwordTxtBox.WaterMark = "Введите пароль здесь";
-            this.passwordTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
-            this.passwordTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
-            this.passwordTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
-            // 
             // statuslabel
             // 
             this.statuslabel.BackColor = System.Drawing.Color.White;
@@ -119,10 +80,49 @@
             this.statuslabel.Text = "Для подтверждения введите пароль учителя\r\n";
             this.statuslabel.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
+            // passwordTxtBox
+            // 
+            // 
+            // 
+            // 
+            this.passwordTxtBox.CustomButton.Image = null;
+            this.passwordTxtBox.CustomButton.Location = new System.Drawing.Point(298, 2);
+            this.passwordTxtBox.CustomButton.Name = "";
+            this.passwordTxtBox.CustomButton.Size = new System.Drawing.Size(25, 25);
+            this.passwordTxtBox.CustomButton.Style = MetroFramework.MetroColorStyle.Blue;
+            this.passwordTxtBox.CustomButton.TabIndex = 1;
+            this.passwordTxtBox.CustomButton.Theme = MetroFramework.MetroThemeStyle.Light;
+            this.passwordTxtBox.CustomButton.UseSelectable = true;
+            this.passwordTxtBox.DisplayIcon = true;
+            this.passwordTxtBox.FontSize = MetroFramework.MetroTextBoxSize.Tall;
+            this.passwordTxtBox.Icon = global::Koro.Properties.Resources.arrow_right_line;
+            this.passwordTxtBox.IconRight = true;
+            this.passwordTxtBox.Lines = new string[0];
+            this.passwordTxtBox.Location = new System.Drawing.Point(90, 71);
+            this.passwordTxtBox.MaxLength = 32767;
+            this.passwordTxtBox.Name = "passwordTxtBox";
+            this.passwordTxtBox.PasswordChar = '•';
+            this.passwordTxtBox.PromptText = "Введите пароль здесь";
+            this.passwordTxtBox.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.passwordTxtBox.SelectedText = "";
+            this.passwordTxtBox.SelectionLength = 0;
+            this.passwordTxtBox.SelectionStart = 0;
+            this.passwordTxtBox.ShortcutsEnabled = true;
+            this.passwordTxtBox.ShowButton = true;
+            this.passwordTxtBox.ShowClearButton = true;
+            this.passwordTxtBox.Size = new System.Drawing.Size(326, 30);
+            this.passwordTxtBox.Style = MetroFramework.MetroColorStyle.Yellow;
+            this.passwordTxtBox.TabIndex = 1;
+            this.passwordTxtBox.UseSelectable = true;
+            this.passwordTxtBox.WaterMark = "Введите пароль здесь";
+            this.passwordTxtBox.WaterMarkColor = System.Drawing.Color.FromArgb(((int)(((byte)(109)))), ((int)(((byte)(109)))), ((int)(((byte)(109)))));
+            this.passwordTxtBox.WaterMarkFont = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Pixel);
+            this.passwordTxtBox.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.textBox1_KeyPress);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = global::Koro.Properties.Resources.shield1;
+            this.pictureBox1.Image = global::Koro.Properties.Resources.shield_user_line;
             this.pictureBox1.Location = new System.Drawing.Point(3, 3);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(524, 129);

@@ -255,47 +255,28 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="imgs\git.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="imgs\security.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="imgs\settings.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Icon.ico" />
-    <None Include="imgs\arrow-down-line.png" />
-    <Content Include="imgs\arrow-left.png" />
-    <None Include="imgs\arrow-up-line.png" />
-    <Content Include="imgs\briefcase.png" />
-    <Content Include="imgs\calendar.png" />
-    <None Include="Resources\Check.png" />
-    <None Include="Resources\Alert.png" />
-    <None Include="Resources\BD.png" />
-    <None Include="Resources\Login2.png" />
+    <Content Include="res\arrow-down-line.png" />
+    <Content Include="res\arrow-right-line.png" />
+    <Content Include="res\arrow-up-line.png" />
+    <Content Include="res\file-settings-line.png" />
+    <Content Include="res\trophy-line.png" />
+    <None Include="res\pencil-line.png" />
+    <None Include="res\database-2-line.png" />
+    <None Include="res\shield-user-line.png" />
+    <None Include="res\logout-box-line.png" />
+    <None Include="res\folder-user-line.png" />
+    <None Include="res\line-chart-line.png" />
+    <None Include="res\calendar-line.png" />
+    <None Include="res\booklet-line.png" />
+    <None Include="res\user-3-line.png" />
+    <None Include="res\alert-line.png" />
+    <None Include="res\check-line.png" />
+    <None Include="res\settings-line.png" />
+    <None Include="res\github-line.png" />
     <None Include="Resources\Template\manifest.json" />
     <None Include="Resources\Template\marks.json" />
     <None Include="Resources\Template\task.json" />
-    <None Include="Resources\Без имени-2.png" />
-    <None Include="Resources\Login1.png" />
-    <None Include="Resources\Login.png" />
-    <None Include="Resources\shield1.png" />
-    <None Include="Resources\shield.png" />
-    <None Include="imgs\code.png" />
-    <Content Include="imgs\database.png" />
-    <Content Include="imgs\edit.png" />
-    <Content Include="imgs\edit_dark.png" />
-    <Content Include="imgs\log-out.png" />
-    <None Include="imgs\marks.png" />
-    <None Include="imgs\plus.png" />
-    <Content Include="imgs\trending-up.png" />
-    <Content Include="imgs\users.png" />
-    <None Include="imgs\StatusSecurityWarning_16x.png" />
-    <None Include="imgs\StatusOK_16x.png" />
-    <None Include="imgs\StatusWarning_16x.png" />
-    <None Include="imgs\FileExclude_16x1.png" />
-    <None Include="imgs\FileExclude_16x.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

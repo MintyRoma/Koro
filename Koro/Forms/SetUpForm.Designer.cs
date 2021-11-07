@@ -156,7 +156,7 @@
             // 
             // ConfirmTxtboxStat
             // 
-            this.ConfirmTxtboxStat.Image = global::Koro.Properties.Resources.Alert;
+            this.ConfirmTxtboxStat.Image = global::Koro.Properties.Resources.alert_line;
             this.ConfirmTxtboxStat.Location = new System.Drawing.Point(381, 307);
             this.ConfirmTxtboxStat.Name = "ConfirmTxtboxStat";
             this.ConfirmTxtboxStat.Size = new System.Drawing.Size(31, 33);
@@ -166,7 +166,7 @@
             // 
             // PassTxtboxStat
             // 
-            this.PassTxtboxStat.Image = global::Koro.Properties.Resources.Check;
+            this.PassTxtboxStat.Image = global::Koro.Properties.Resources.check_line;
             this.PassTxtboxStat.Location = new System.Drawing.Point(381, 240);
             this.PassTxtboxStat.Name = "PassTxtboxStat";
             this.PassTxtboxStat.Size = new System.Drawing.Size(31, 33);
@@ -174,7 +174,7 @@
             this.PassTxtboxStat.TabIndex = 10;
             this.PassTxtboxStat.TabStop = false;
             // 
-            // SetUp
+            // SetUpForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -191,7 +191,7 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.NameTxtBox);
             this.MaximizeBox = false;
-            this.Name = "SetUp";
+            this.Name = "SetUpForm";
             this.Resizable = false;
             this.Text = "Настройка программы";
             this.Load += new System.EventHandler(this.FirstStartForm_Load);

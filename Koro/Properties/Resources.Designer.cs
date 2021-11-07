@@ -63,9 +63,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Alert {
+        internal static System.Drawing.Bitmap alert_line {
             get {
-                object obj = ResourceManager.GetObject("Alert", resourceCulture);
+                object obj = ResourceManager.GetObject("alert-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -75,7 +75,7 @@ namespace Koro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_down_line {
             get {
-                object obj = ResourceManager.GetObject("arrow-down-line", resourceCulture);
+                object obj = ResourceManager.GetObject("arrow_down_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -83,9 +83,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap arrow_left {
+        internal static System.Drawing.Bitmap arrow_right_line {
             get {
-                object obj = ResourceManager.GetObject("arrow_left", resourceCulture);
+                object obj = ResourceManager.GetObject("arrow_right_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -95,7 +95,7 @@ namespace Koro.Properties {
         /// </summary>
         internal static System.Drawing.Bitmap arrow_up_line {
             get {
-                object obj = ResourceManager.GetObject("arrow-up-line", resourceCulture);
+                object obj = ResourceManager.GetObject("arrow_up_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -103,9 +103,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap BD {
+        internal static System.Drawing.Bitmap booklet_line {
             get {
-                object obj = ResourceManager.GetObject("BD", resourceCulture);
+                object obj = ResourceManager.GetObject("booklet-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +113,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap briefcase {
+        internal static System.Drawing.Bitmap calendar_line {
             get {
-                object obj = ResourceManager.GetObject("briefcase", resourceCulture);
+                object obj = ResourceManager.GetObject("calendar-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -123,9 +123,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap calendar {
+        internal static System.Drawing.Bitmap check_line {
             get {
-                object obj = ResourceManager.GetObject("calendar", resourceCulture);
+                object obj = ResourceManager.GetObject("check-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -133,9 +133,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Check {
+        internal static System.Drawing.Bitmap database_2_line {
             get {
-                object obj = ResourceManager.GetObject("Check", resourceCulture);
+                object obj = ResourceManager.GetObject("database-2-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +143,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap code {
+        internal static System.Drawing.Bitmap file_settings_line {
             get {
-                object obj = ResourceManager.GetObject("code", resourceCulture);
+                object obj = ResourceManager.GetObject("file_settings_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -153,9 +153,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap database {
+        internal static System.Drawing.Bitmap folder_user_line {
             get {
-                object obj = ResourceManager.GetObject("database", resourceCulture);
+                object obj = ResourceManager.GetObject("folder-user-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +163,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap edit {
+        internal static System.Drawing.Bitmap github_line {
             get {
-                object obj = ResourceManager.GetObject("edit", resourceCulture);
+                object obj = ResourceManager.GetObject("github-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -173,9 +173,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap edit_dark {
+        internal static System.Drawing.Bitmap line_chart_line {
             get {
-                object obj = ResourceManager.GetObject("edit_dark", resourceCulture);
+                object obj = ResourceManager.GetObject("line-chart-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -183,59 +183,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap FileExclude_16x1 {
+        internal static System.Drawing.Bitmap logout_box_line {
             get {
-                object obj = ResourceManager.GetObject("FileExclude_16x1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap git {
-            get {
-                object obj = ResourceManager.GetObject("git", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap log_out {
-            get {
-                object obj = ResourceManager.GetObject("log_out", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login {
-            get {
-                object obj = ResourceManager.GetObject("Login", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login1 {
-            get {
-                object obj = ResourceManager.GetObject("Login1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Login2 {
-            get {
-                object obj = ResourceManager.GetObject("Login2", resourceCulture);
+                object obj = ResourceManager.GetObject("logout-box-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -263,9 +213,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap marksimg {
+        internal static System.Drawing.Bitmap pencil_line {
             get {
-                object obj = ResourceManager.GetObject("marksimg", resourceCulture);
+                object obj = ResourceManager.GetObject("pencil-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -273,9 +223,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap plus {
+        internal static System.Drawing.Bitmap settings_line {
             get {
-                object obj = ResourceManager.GetObject("plus", resourceCulture);
+                object obj = ResourceManager.GetObject("settings-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,49 +233,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap security {
+        internal static System.Drawing.Bitmap shield_user_line {
             get {
-                object obj = ResourceManager.GetObject("security", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap settings {
-            get {
-                object obj = ResourceManager.GetObject("settings", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap shield {
-            get {
-                object obj = ResourceManager.GetObject("shield", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap shield1 {
-            get {
-                object obj = ResourceManager.GetObject("shield1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap StatusSecurityWarning_16x {
-            get {
-                object obj = ResourceManager.GetObject("StatusSecurityWarning_16x", resourceCulture);
+                object obj = ResourceManager.GetObject("shield-user-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -343,9 +253,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap trending_up {
+        internal static System.Drawing.Bitmap trophy_line {
             get {
-                object obj = ResourceManager.GetObject("trending_up", resourceCulture);
+                object obj = ResourceManager.GetObject("trophy_line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -353,19 +263,9 @@ namespace Koro.Properties {
         /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap users {
+        internal static System.Drawing.Bitmap user_3_line {
             get {
-                object obj = ResourceManager.GetObject("users", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap Без_имени_2 {
-            get {
-                object obj = ResourceManager.GetObject("Без имени-2", resourceCulture);
+                object obj = ResourceManager.GetObject("user-3-line", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

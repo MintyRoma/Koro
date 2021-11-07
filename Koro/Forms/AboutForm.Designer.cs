@@ -58,8 +58,8 @@
             this.textBox1.Size = new System.Drawing.Size(574, 197);
             this.textBox1.TabIndex = 2;
             this.textBox1.Text = "Программа тестирования студентов и учеников\r\nВерсия: Beta\r\nРазработчик: Minty Rom" +
-    "a\r\nvk.com/minty_r\r\ngithub.com/minty_roma\r\n\r\nИконки: Feather (github.com/featheri" +
-    "cons/feather)\r\n\r\n2021 год";
+    "a\r\nvk.com/minty_r\r\ngithub.com/minty_roma\r\n\r\nИконки: Remix Icons (github.com/Remi" +
+    "x-Design/RemixIcon)\r\n\r\n2021 год";
             this.textBox1.TextChanged += new System.EventHandler(this.TextBox1_TextChanged);
             // 
             // button1

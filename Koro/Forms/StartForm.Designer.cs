@@ -38,19 +38,19 @@
             this.metroLabel1 = new MetroFramework.Controls.MetroLabel();
             this.metroPanel1 = new MetroFramework.Controls.MetroPanel();
             this.SubjectSelector = new MetroFramework.Controls.MetroPanel();
-            this.GoToGit = new System.Windows.Forms.PictureBox();
-            this.GoToSetings = new System.Windows.Forms.PictureBox();
             this.statusBar = new System.Windows.Forms.Panel();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.GoToSetings = new System.Windows.Forms.PictureBox();
+            this.GoToGit = new System.Windows.Forms.PictureBox();
             this.PersonalDataPanel.SuspendLayout();
             this.metroPanel2.SuspendLayout();
             this.metroPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.GoToGit)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GoToSetings)).BeginInit();
             this.statusBar.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoToSetings)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoToGit)).BeginInit();
             this.SuspendLayout();
             // 
             // metroTextBox1
@@ -214,34 +214,6 @@
             this.SubjectSelector.VerticalScrollbarHighlightOnWheel = false;
             this.SubjectSelector.VerticalScrollbarSize = 10;
             // 
-            // GoToGit
-            // 
-            this.GoToGit.Dock = System.Windows.Forms.DockStyle.Left;
-            this.GoToGit.Image = global::Koro.Properties.Resources.git;
-            this.GoToGit.Location = new System.Drawing.Point(0, 0);
-            this.GoToGit.Name = "GoToGit";
-            this.GoToGit.Size = new System.Drawing.Size(26, 20);
-            this.GoToGit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoToGit.TabIndex = 0;
-            this.GoToGit.TabStop = false;
-            this.GoToGit.Click += new System.EventHandler(this.GoToGit_Click);
-            this.GoToGit.MouseLeave += new System.EventHandler(this.GoToGit_MouseLeave);
-            this.GoToGit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GoToGit_MouseMove);
-            // 
-            // GoToSetings
-            // 
-            this.GoToSetings.Dock = System.Windows.Forms.DockStyle.Right;
-            this.GoToSetings.Image = global::Koro.Properties.Resources.settings;
-            this.GoToSetings.Location = new System.Drawing.Point(630, 0);
-            this.GoToSetings.Name = "GoToSetings";
-            this.GoToSetings.Size = new System.Drawing.Size(40, 20);
-            this.GoToSetings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.GoToSetings.TabIndex = 1;
-            this.GoToSetings.TabStop = false;
-            this.GoToSetings.Click += new System.EventHandler(this.GoToSetings_Click);
-            this.GoToSetings.MouseLeave += new System.EventHandler(this.GoToSetings_MouseLeave);
-            this.GoToSetings.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GoToSetings_MouseMove);
-            // 
             // statusBar
             // 
             this.statusBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(16)))), ((int)(((byte)(105)))));
@@ -276,7 +248,7 @@
             this.label2.Dock = System.Windows.Forms.DockStyle.Right;
             this.label2.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(478, 0);
+            this.label2.Location = new System.Drawing.Point(484, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(57, 19);
             this.label2.TabIndex = 4;
@@ -288,7 +260,7 @@
             this.label1.Dock = System.Windows.Forms.DockStyle.Right;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(535, 0);
+            this.label1.Location = new System.Drawing.Point(541, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(50, 19);
             this.label1.TabIndex = 3;
@@ -297,10 +269,38 @@
             // panel1
             // 
             this.panel1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel1.Location = new System.Drawing.Point(585, 0);
+            this.panel1.Location = new System.Drawing.Point(591, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(45, 20);
             this.panel1.TabIndex = 2;
+            // 
+            // GoToSetings
+            // 
+            this.GoToSetings.Dock = System.Windows.Forms.DockStyle.Right;
+            this.GoToSetings.Image = global::Koro.Properties.Resources.settings_line;
+            this.GoToSetings.Location = new System.Drawing.Point(636, 0);
+            this.GoToSetings.Name = "GoToSetings";
+            this.GoToSetings.Size = new System.Drawing.Size(34, 20);
+            this.GoToSetings.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoToSetings.TabIndex = 1;
+            this.GoToSetings.TabStop = false;
+            this.GoToSetings.Click += new System.EventHandler(this.GoToSetings_Click);
+            this.GoToSetings.MouseLeave += new System.EventHandler(this.GoToSetings_MouseLeave);
+            this.GoToSetings.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GoToSetings_MouseMove);
+            // 
+            // GoToGit
+            // 
+            this.GoToGit.Dock = System.Windows.Forms.DockStyle.Left;
+            this.GoToGit.Image = global::Koro.Properties.Resources.github_line;
+            this.GoToGit.Location = new System.Drawing.Point(0, 0);
+            this.GoToGit.Name = "GoToGit";
+            this.GoToGit.Size = new System.Drawing.Size(26, 20);
+            this.GoToGit.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.GoToGit.TabIndex = 0;
+            this.GoToGit.TabStop = false;
+            this.GoToGit.Click += new System.EventHandler(this.GoToGit_Click);
+            this.GoToGit.MouseLeave += new System.EventHandler(this.GoToGit_MouseLeave);
+            this.GoToGit.MouseMove += new System.Windows.Forms.MouseEventHandler(this.GoToGit_MouseMove);
             // 
             // Start
             // 
@@ -322,10 +322,10 @@
             this.metroPanel2.ResumeLayout(false);
             this.metroPanel2.PerformLayout();
             this.metroPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.GoToGit)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.GoToSetings)).EndInit();
             this.statusBar.ResumeLayout(false);
             this.statusBar.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.GoToSetings)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.GoToGit)).EndInit();
             this.ResumeLayout(false);
 
         }

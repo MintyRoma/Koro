@@ -28,14 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SetingsForm));
             this.menuPanel = new System.Windows.Forms.Panel();
+            this.ViewerPanel = new System.Windows.Forms.Panel();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.UsersBtn = new System.Windows.Forms.Button();
             this.GraphBtn = new System.Windows.Forms.Button();
             this.History = new System.Windows.Forms.Button();
             this.SubjectsBtn = new System.Windows.Forms.Button();
             this.ProfileBtn = new System.Windows.Forms.Button();
-            this.ViewerPanel = new System.Windows.Forms.Panel();
             this.menuPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -55,6 +56,15 @@
             this.menuPanel.TabIndex = 0;
             this.menuPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.MenuPanel_Paint);
             // 
+            // ViewerPanel
+            // 
+            this.ViewerPanel.BackColor = System.Drawing.Color.White;
+            this.ViewerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.ViewerPanel.Location = new System.Drawing.Point(230, 60);
+            this.ViewerPanel.Name = "ViewerPanel";
+            this.ViewerPanel.Size = new System.Drawing.Size(600, 520);
+            this.ViewerPanel.TabIndex = 1;
+            // 
             // ExitBtn
             // 
             this.ExitBtn.Dock = System.Windows.Forms.DockStyle.Top;
@@ -62,7 +72,7 @@
             this.ExitBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ExitBtn.ForeColor = System.Drawing.Color.Crimson;
-            this.ExitBtn.Image = global::Koro.Properties.Resources.log_out;
+            this.ExitBtn.Image = global::Koro.Properties.Resources.logout_box_line;
             this.ExitBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ExitBtn.Location = new System.Drawing.Point(0, 205);
             this.ExitBtn.Name = "ExitBtn";
@@ -81,7 +91,7 @@
             this.UsersBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.UsersBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.UsersBtn.ForeColor = System.Drawing.Color.Black;
-            this.UsersBtn.Image = global::Koro.Properties.Resources.users;
+            this.UsersBtn.Image = global::Koro.Properties.Resources.folder_user_line;
             this.UsersBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.UsersBtn.Location = new System.Drawing.Point(0, 164);
             this.UsersBtn.Name = "UsersBtn";
@@ -99,7 +109,7 @@
             this.GraphBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.GraphBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.GraphBtn.ForeColor = System.Drawing.Color.Black;
-            this.GraphBtn.Image = global::Koro.Properties.Resources.trending_up;
+            this.GraphBtn.Image = global::Koro.Properties.Resources.line_chart_line;
             this.GraphBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.GraphBtn.Location = new System.Drawing.Point(0, 123);
             this.GraphBtn.Name = "GraphBtn";
@@ -117,7 +127,7 @@
             this.History.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.History.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.History.ForeColor = System.Drawing.Color.Black;
-            this.History.Image = global::Koro.Properties.Resources.calendar;
+            this.History.Image = global::Koro.Properties.Resources.calendar_line;
             this.History.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.History.Location = new System.Drawing.Point(0, 82);
             this.History.Name = "History";
@@ -135,7 +145,7 @@
             this.SubjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubjectsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubjectsBtn.ForeColor = System.Drawing.Color.Black;
-            this.SubjectsBtn.Image = global::Koro.Properties.Resources.database;
+            this.SubjectsBtn.Image = global::Koro.Properties.Resources.booklet_line;
             this.SubjectsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubjectsBtn.Location = new System.Drawing.Point(0, 41);
             this.SubjectsBtn.Name = "SubjectsBtn";
@@ -154,7 +164,7 @@
             this.ProfileBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.ProfileBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ProfileBtn.ForeColor = System.Drawing.Color.Black;
-            this.ProfileBtn.Image = global::Koro.Properties.Resources.briefcase;
+            this.ProfileBtn.Image = ((System.Drawing.Image)(resources.GetObject("ProfileBtn.Image")));
             this.ProfileBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.ProfileBtn.Location = new System.Drawing.Point(0, 0);
             this.ProfileBtn.Name = "ProfileBtn";
@@ -165,15 +175,6 @@
             this.ProfileBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.ProfileBtn.UseVisualStyleBackColor = true;
             this.ProfileBtn.Click += new System.EventHandler(this.ProfileBtn_Click);
-            // 
-            // ViewerPanel
-            // 
-            this.ViewerPanel.BackColor = System.Drawing.Color.White;
-            this.ViewerPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ViewerPanel.Location = new System.Drawing.Point(230, 60);
-            this.ViewerPanel.Name = "ViewerPanel";
-            this.ViewerPanel.Size = new System.Drawing.Size(600, 520);
-            this.ViewerPanel.TabIndex = 1;
             // 
             // SetingsForm
             // 

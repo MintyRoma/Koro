@@ -31,15 +31,15 @@ namespace Koro.Forms
             ErrMsg.Text = "";
             if (!PassNotNull || !PassConfirmation)
             {
-                PassTxtboxStat.Image = Koro.Properties.Resources.Alert;
-                ConfirmTxtboxStat.Image = Properties.Resources.Alert;
+                PassTxtboxStat.Image = Koro.Properties.Resources.alert_line;
+                ConfirmTxtboxStat.Image = Properties.Resources.alert_line;
                 if (!PassConfirmation) ErrMsg.Text = Classes.DefaultMessages.ERRORWrongPassConfirmation;
                 if (!PassNotNull) ErrMsg.Text = Classes.DefaultMessages.ERRORPassIsNull;
             }
             else
             {
-                PassTxtboxStat.Image = Koro.Properties.Resources.Check;
-                ConfirmTxtboxStat.Image = Properties.Resources.Check;
+                PassTxtboxStat.Image = Koro.Properties.Resources.check_line;
+                ConfirmTxtboxStat.Image = Properties.Resources.check_line;
             }
         }
 

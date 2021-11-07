@@ -267,7 +267,7 @@
             this.MarksBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.MarksBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.MarksBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.MarksBtn.Image = global::Koro.Properties.Resources.marksimg;
+            this.MarksBtn.Image = global::Koro.Properties.Resources.trophy_line;
             this.MarksBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.MarksBtn.Location = new System.Drawing.Point(0, 82);
             this.MarksBtn.Name = "MarksBtn";
@@ -286,7 +286,7 @@
             this.SubjectsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.SubjectsBtn.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.SubjectsBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
-            this.SubjectsBtn.Image = global::Koro.Properties.Resources.code;
+            this.SubjectsBtn.Image = global::Koro.Properties.Resources.file_settings_line;
             this.SubjectsBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.SubjectsBtn.Location = new System.Drawing.Point(0, 41);
             this.SubjectsBtn.Name = "SubjectsBtn";
