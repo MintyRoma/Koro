@@ -137,10 +137,19 @@ namespace Koro
                     tile.Width = 200;
                     tile.UseCustomBackColor = true;
                     tile.BackColor = MetroFramework.MetroColors.Purple;
+                    tile.Click += RunSubject;
                     tiles.Add(tile);
                 }
                 PlaceTiles(tiles);
             }
+        }
+
+        private void RunSubject(object sender, EventArgs e)
+        {
+            if (!(sender is MetroTile)) return;
+            MetroTile tile = (MetroTile)sender;
+            string filename = tile.Text;
+            filename += ".ksf";
         }
 
         private void PlaceTiles(List<MetroTile> tiles)
@@ -197,6 +206,11 @@ namespace Koro
         private void Start_SizeChanged(object sender, EventArgs e)
         {
             PlaceTiles(tiles);
+        }
+
+        private void SubjectSelector_Paint_1(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

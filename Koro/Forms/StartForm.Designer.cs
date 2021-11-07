@@ -213,6 +213,7 @@
             this.SubjectSelector.VerticalScrollbarBarColor = true;
             this.SubjectSelector.VerticalScrollbarHighlightOnWheel = false;
             this.SubjectSelector.VerticalScrollbarSize = 10;
+            this.SubjectSelector.Paint += new System.Windows.Forms.PaintEventHandler(this.SubjectSelector_Paint_1);
             // 
             // statusBar
             // 
@@ -238,9 +239,9 @@
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(26, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(66, 19);
+            this.label3.Size = new System.Drawing.Size(38, 19);
             this.label3.TabIndex = 5;
-            this.label3.Text = "EduAtmo";
+            this.label3.Text = "Koro";
             // 
             // label2
             // 

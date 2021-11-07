@@ -215,7 +215,7 @@ namespace Koro.Forms.SetingsPages
 
         private void DelSub_Click(object sender, EventArgs e)
         {
-            if (SubjectsList.SelectedIndex == null) return;
+            if (SubjectsList.SelectedIndex == -1) return;
             string filename = SubjectsList.SelectedItem.ToString();
             if (File.Exists(@".\Subjects\" + filename + ".ksf")) File.Delete(@".\Subjects\" + filename + ".ksf");
             UpdateListing();
@@ -234,7 +234,7 @@ namespace Koro.Forms.SetingsPages
                 if (res==DialogResult.OK)
                 {
                     string saveto = sd.FileName;
-                    File.Copy(@".\Subjects\" + filename + ".ksf", saveto);
+                    File.Copy(@".\Subjects\" + filename + ".ksf", saveto,true);
                 }
             }
         }
